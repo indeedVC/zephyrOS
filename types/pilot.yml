@@ -1,0 +1,108 @@
+base: roblox
+globals:
+  Beep:
+    args:
+    - type: number
+  FileSystem:
+    property: read-only
+  FileSystem.*:
+    type: any
+  GetCPUTime:
+    args: []
+  GetPart:
+    args:
+    - type: string
+  GetPartFromPort:
+    args:
+    - type:
+        display: Port | number
+    - type: string
+  GetParts:
+    args:
+    - type: string
+  GetPartsFromPort:
+    args:
+    - type:
+        display: Port | number
+    - type: string
+  GetPort:
+    args:
+    - type: number
+  GetPorts:
+    args:
+    - type: number
+  JSONDecode:
+    args:
+    - type: string
+  JSONEncode:
+    args:
+    - type:
+        display: JSON
+  Microcontroller:
+    property: read-only
+  Microcontroller.*:
+    type: any
+  Network:
+    property: read-only
+  Network.*:
+    type: any
+  RawFileSystem:
+    property: read-only
+  RawFileSystem.*:
+    type: any
+  SandboxID:
+    property: read-only
+  SandboxID.*:
+    type: any
+  SandboxRunID:
+    property: read-only
+  SandboxRunID.*:
+    type: any
+  TriggerPort:
+    args:
+    - type:
+        display: Port | number
+  logError:
+    args:
+    - type: string
+    - type: number
+  pilot.claimThread:
+    args:
+    - type:
+        display: thread
+  pilot.getCPUTime:
+    args: []
+  pilot.getRing:
+    args:
+    - type:
+        display: thread
+  pilot.getThreadParent:
+    args:
+    - type:
+        display: thread
+  pilot.getTimeout:
+    args:
+    - type:
+        display: thread
+  pilot.hasRing:
+    args:
+    - type: number
+    - type:
+        display: thread
+  pilot.saveRing:
+    args:
+    - type: number
+  pilot.setInterrupt:
+    args:
+    - type: number
+    - type: function
+  pilot.setRing:
+    args:
+    - type: number
+    - type:
+        display: thread
+  pilot.setTimeout:
+    args:
+    - type: number
+    - type:
+        display: thread

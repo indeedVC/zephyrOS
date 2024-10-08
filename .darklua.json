@@ -1,0 +1,17 @@
+{
+  "bundle": {
+    "excludes": [
+      "ar_input",
+      "fs",
+      "nature2d",
+      "players",
+      "repr",
+      "signal",
+      "symbol",
+      "tween"
+    ],
+    "require_mode": {
+      "name": "path"
+    }
+  }
+}

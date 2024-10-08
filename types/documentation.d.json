@@ -1,0 +1,4439 @@
+{
+  "@roblox/global/Beep": {
+    "code_sample": "-- Beep!\nBeep(1)",
+    "documentation": "Produces a beep sound using a triangle wave.",
+    "params": [
+      {
+        "name": "frequency"
+      }
+    ]
+  },
+  "@roblox/global/FileSystem": {},
+  "@roblox/global/GetCPUTime": {
+    "documentation": "@deprecated -- Use `pilot.getCPUTime` instead.\n\nReturns the current elapsed CPU time.",
+    "params": [],
+    "returns": [
+      "@roblox/global/GetCPUTime/returns/0"
+    ]
+  },
+  "@roblox/global/GetCPUTime/returns/0": {},
+  "@roblox/global/GetPart": {
+    "code_sample": "-- Get a `Screen` from any port\nlocal screen = GetPart(\"Screen\")",
+    "documentation": "Gets a part of the specified type from any connected ports.",
+    "params": [
+      {
+        "name": "part"
+      }
+    ]
+  },
+  "@roblox/global/GetPartFromPort": {
+    "code_sample": "-- Get a `TouchScreen` from port 1\nlocal touchScreen = GetPartFromPort(1, \"TouchScreen\")",
+    "documentation": "Gets a part of the specified type from any port of the specified ID.",
+    "params": [
+      {
+        "name": "port"
+      },
+      {
+        "name": "part"
+      }
+    ]
+  },
+  "@roblox/global/GetParts": {
+    "code_sample": "-- Get all `Switch`es connected to any port\nlocal switches = GetParts(\"Switch\")",
+    "documentation": "Gets all the parts of the specified type from any connected ports.",
+    "params": [
+      {
+        "name": "part"
+      }
+    ]
+  },
+  "@roblox/global/GetPartsFromPort": {
+    "code_sample": "-- Get all `Lights` from port 1\nlocal lights = GetPartsFromPort(1, \"Light\")",
+    "documentation": "Gets all the parts of the specified type from any port of the specified ID.",
+    "params": [
+      {
+        "name": "port"
+      },
+      {
+        "name": "part"
+      }
+    ]
+  },
+  "@roblox/global/GetPort": {
+    "code_sample": "-- Get port with an ID of 1\nlocal port = GetPort(1)",
+    "documentation": "Gets the connected port of the specified ID.",
+    "params": [
+      {
+        "name": "id"
+      }
+    ],
+    "returns": [
+      "@roblox/global/GetPort/returns/0"
+    ]
+  },
+  "@roblox/global/GetPort/returns/0": {},
+  "@roblox/global/GetPorts": {
+    "code_sample": "-- Get all ports, no matter the ID\nlocal ports = GetPort()",
+    "documentation": "Gets all the connected ports of the specified ID.",
+    "params": [
+      {
+        "name": "id"
+      }
+    ],
+    "returns": [
+      "@roblox/global/GetPorts/returns/0"
+    ]
+  },
+  "@roblox/global/GetPorts/returns/0": {},
+  "@roblox/global/JSONDecode": {
+    "code_sample": "-- Decode a JSON string\nlocal jsonString = '{\"name\": \"example\", \"value\": 42}'\nprint(repr(JSONDecode(jsonString))) -- { name = \"example\", value = 42 }",
+    "documentation": "Decodes JSON.",
+    "learn_more_link": "https://create.roblox.com/docs/reference/engine/classes/HttpService#JSONDecode",
+    "params": [
+      {
+        "name": "data"
+      }
+    ],
+    "returns": [
+      "@roblox/global/JSONDecode/returns/0"
+    ]
+  },
+  "@roblox/global/JSONDecode/returns/0": {},
+  "@roblox/global/JSONEncode": {
+    "code_sample": "local data = { name = \"example\", value = 42 }\nprint(JSONEncode(data)) -- {\"name\":\"example\",\"value\":42}",
+    "documentation": "Encodes JSON. Proxy for `HttpService:JSONEncode`",
+    "learn_more_link": "https://create.roblox.com/docs/reference/engine/classes/HttpService#JSONEncode",
+    "params": [
+      {
+        "name": "data"
+      }
+    ],
+    "returns": [
+      "@roblox/global/JSONEncode/returns/0"
+    ]
+  },
+  "@roblox/global/JSONEncode/returns/0": {},
+  "@roblox/global/Microcontroller": {
+    "documentation": "@readonly\n\nThe microcontroller object the program is running in."
+  },
+  "@roblox/global/Network": {},
+  "@roblox/global/RawFileSystem": {},
+  "@roblox/global/SandboxID": {
+    "documentation": "@readonly\n\nThe GUID of the microcontroller the program is running in."
+  },
+  "@roblox/global/SandboxRunID": {
+    "documentation": "@readonly\n\nA GUID for the current running program, it is (re)generated when the microcontroller is turned on."
+  },
+  "@roblox/global/TriggerPort": {
+    "documentation": "Triggers the specified port.",
+    "params": [
+      {
+        "name": "port"
+      }
+    ]
+  },
+  "@roblox/global/logError": {
+    "documentation": "Logs an error in the output.",
+    "params": [
+      {
+        "name": "message"
+      },
+      {
+        "name": "level"
+      }
+    ]
+  },
+  "@roblox/global/pilot": {
+    "documentation": "Provides functions for accessing/manipulating information about threads such as permissions, ownership, and interrupts.",
+    "keys": [
+      "@roblox/global/pilot.setTimeout",
+      "@roblox/global/pilot.hasRing",
+      "@roblox/global/pilot.setInterrupt",
+      "@roblox/global/pilot.getTimeout",
+      "@roblox/global/pilot.setRing",
+      "@roblox/global/pilot.claimThread",
+      "@roblox/global/pilot.getCPUTime",
+      "@roblox/global/pilot.getRing",
+      "@roblox/global/pilot.getThreadParent",
+      "@roblox/global/pilot.saveRing"
+    ]
+  },
+  "@roblox/global/pilot.claimThread": {
+    "documentation": "Sets the thread's parent to the running thread. The target thread must be part of the sandbox and may not exist on a lower ring otherwise nothing will happen.",
+    "params": [
+      {
+        "name": "thread"
+      }
+    ],
+    "returns": [
+      "@roblox/global/pilot.claimThread/returns/0"
+    ]
+  },
+  "@roblox/global/pilot.claimThread/returns/0": {},
+  "@roblox/global/pilot.getCPUTime": {
+    "documentation": "Returns the current elapsed CPU time.",
+    "params": [],
+    "returns": [
+      "@roblox/global/pilot.getCPUTime/returns/0"
+    ]
+  },
+  "@roblox/global/pilot.getCPUTime/returns/0": {},
+  "@roblox/global/pilot.getRing": {
+    "documentation": "Gets the ring of the target (or running) thread.",
+    "params": [
+      {
+        "name": "thread"
+      }
+    ],
+    "returns": [
+      "@roblox/global/pilot.getRing/returns/0"
+    ]
+  },
+  "@roblox/global/pilot.getRing/returns/0": {},
+  "@roblox/global/pilot.getThreadParent": {
+    "documentation": "Gets the parent of the target (or running) thread. The parent thread must be part of the sandbox and may not exist on a lower ring otherwise nil will be returned.",
+    "params": [
+      {
+        "name": "thread"
+      }
+    ],
+    "returns": [
+      "@roblox/global/pilot.getThreadParent/returns/0"
+    ]
+  },
+  "@roblox/global/pilot.getThreadParent/returns/0": {},
+  "@roblox/global/pilot.getTimeout": {
+    "documentation": "Gets the current CPU timeout, or the CPU timeout that the given thread will obey.",
+    "params": [
+      {
+        "name": "thread"
+      }
+    ],
+    "returns": [
+      "@roblox/global/pilot.getTimeout/returns/0"
+    ]
+  },
+  "@roblox/global/pilot.getTimeout/returns/0": {},
+  "@roblox/global/pilot.hasRing": {
+    "documentation": "Checks if the target (or running) thread has the specified ring privilege or lower.",
+    "params": [
+      {
+        "name": "ring"
+      },
+      {
+        "name": "thread"
+      }
+    ],
+    "returns": [
+      "@roblox/global/pilot.hasRing/returns/0"
+    ]
+  },
+  "@roblox/global/pilot.hasRing/returns/0": {},
+  "@roblox/global/pilot.saveRing": {
+    "documentation": "Creates a function which elevates the caller to the specified (or current) ring regardless of its privilege. You can use this to de-escalate, spawn a new thread, and then re-escalate your thread after. Requires ring 0 or lower.",
+    "params": [
+      {
+        "name": "ring"
+      }
+    ],
+    "returns": [
+      "@roblox/global/pilot.saveRing/returns/0"
+    ]
+  },
+  "@roblox/global/pilot.saveRing/returns/0": {},
+  "@roblox/global/pilot.setInterrupt": {
+    "documentation": "Will repeatedly call the interrupt every period CPU time on a valid resumption time (ignores yields/waits). Returns a function which deletes the interrupt.",
+    "params": [
+      {
+        "name": "period"
+      },
+      {
+        "name": "callback"
+      }
+    ],
+    "returns": [
+      "@roblox/global/pilot.setInterrupt/returns/0"
+    ]
+  },
+  "@roblox/global/pilot.setInterrupt/returns/0": {},
+  "@roblox/global/pilot.setRing": {
+    "documentation": "Sets the ring of the target (or running) thread. You can use .saveRing to store the current ring so you can escalate again later.",
+    "params": [
+      {
+        "name": "ring"
+      },
+      {
+        "name": "thread"
+      }
+    ]
+  },
+  "@roblox/global/pilot.setTimeout": {
+    "documentation": "Sets the CPU timeout of the given thread. Requires ring -1 or lower. This will not let you exceed the game's timeout, but will let you set lower timeouts. This has to do with whatever thread happens to be actively running. Currently there is not a way for you to recover from a timeout, so you should use .setInterrupt to handle your own custom timeouts.",
+    "params": [
+      {
+        "name": "timeout"
+      },
+      {
+        "name": "thread"
+      }
+    ]
+  },
+  "@roblox/globaltype/ARCamera": {
+    "keys": {
+      "CFrame": "@roblox/globaltype/ARCamera.CFrame",
+      "CameraType": "@roblox/globaltype/ARCamera.CameraType",
+      "DiagonalFieldOfView": "@roblox/globaltype/ARCamera.DiagonalFieldOfView",
+      "FieldOfView": "@roblox/globaltype/ARCamera.FieldOfView",
+      "FieldOfViewMode": "@roblox/globaltype/ARCamera.FieldOfViewMode",
+      "Focus": "@roblox/globaltype/ARCamera.Focus",
+      "HeadScale": "@roblox/globaltype/ARCamera.HeadScale",
+      "MaxAxisFieldOfView": "@roblox/globaltype/ARCamera.MaxAxisFieldOfView",
+      "NearPlaneZ": "@roblox/globaltype/ARCamera.NearPlaneZ",
+      "RenderCFrame": "@roblox/globaltype/ARCamera.RenderCFrame",
+      "ViewportSize": "@roblox/globaltype/ARCamera.ViewportSize",
+      "ViewportSizeUI": "@roblox/globaltype/ARCamera.ViewportSizeUI"
+    }
+  },
+  "@roblox/globaltype/ARCamera.CFrame": {
+    "learn_more_link": "https://create.roblox.com/docs/reference/engine/classes/Camera#CFrame"
+  },
+  "@roblox/globaltype/ARCamera.CameraType": {
+    "learn_more_link": "https://create.roblox.com/docs/reference/engine/classes/Camera#CameraType"
+  },
+  "@roblox/globaltype/ARCamera.DiagonalFieldOfView": {
+    "learn_more_link": "https://create.roblox.com/docs/reference/engine/classes/Camera#DiagonalFieldOfView"
+  },
+  "@roblox/globaltype/ARCamera.FieldOfView": {
+    "learn_more_link": "https://create.roblox.com/docs/reference/engine/classes/Camera#FieldOfView"
+  },
+  "@roblox/globaltype/ARCamera.FieldOfViewMode": {
+    "learn_more_link": "https://create.roblox.com/docs/reference/engine/classes/Camera#FieldOfViewMode"
+  },
+  "@roblox/globaltype/ARCamera.Focus": {
+    "learn_more_link": "https://create.roblox.com/docs/reference/engine/classes/Camera#Focus"
+  },
+  "@roblox/globaltype/ARCamera.HeadScale": {
+    "learn_more_link": "https://create.roblox.com/docs/reference/engine/classes/Camera#HeadScale"
+  },
+  "@roblox/globaltype/ARCamera.MaxAxisFieldOfView": {
+    "learn_more_link": "https://create.roblox.com/docs/reference/engine/classes/Camera#MaxAxisFieldOfView"
+  },
+  "@roblox/globaltype/ARCamera.NearPlaneZ": {
+    "learn_more_link": "https://create.roblox.com/docs/reference/engine/classes/Camera#NearPlaneZ"
+  },
+  "@roblox/globaltype/ARCamera.RenderCFrame": {
+    "documentation": "The CFrame the camera is rendered at (for VR)",
+    "learn_more_link": "https://create.roblox.com/docs/reference/engine/classes/Camera#RenderCFrame"
+  },
+  "@roblox/globaltype/ARCamera.ViewportSize": {
+    "documentation": "The size of the camera viewport",
+    "learn_more_link": "https://create.roblox.com/docs/reference/engine/classes/Camera#ViewportSize"
+  },
+  "@roblox/globaltype/ARCamera.ViewportSizeUI": {
+    "documentation": "The size of the camera viewport (2D UI context)"
+  },
+  "@roblox/globaltype/ARController": {
+    "keys": {
+      "ClearElements3D": "@roblox/globaltype/ARController.ClearElements3D",
+      "Configured": "@roblox/globaltype/ARController.Configured",
+      "CreateElement3D": "@roblox/globaltype/ARController.CreateElement3D",
+      "CursorMoved": "@roblox/globaltype/ARController.CursorMoved",
+      "CursorPressed": "@roblox/globaltype/ARController.CursorPressed",
+      "CursorReleased": "@roblox/globaltype/ARController.CursorReleased",
+      "GetCursor": "@roblox/globaltype/ARController.GetCursor",
+      "GetCursors": "@roblox/globaltype/ARController.GetCursors",
+      "OnClick": "@roblox/globaltype/ARController.OnClick",
+      "Transparency": "@roblox/globaltype/ARController.Transparency"
+    }
+  },
+  "@roblox/globaltype/ARController.ClearElements3D": {
+    "documentation": "Clears 3D elements.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/ARController",
+        "name": "self"
+      }
+    ]
+  },
+  "@roblox/globaltype/ARController.Configured": {
+    "documentation": "Fires when the object is configured."
+  },
+  "@roblox/globaltype/ARController.CreateElement3D": {
+    "documentation": "Creates a 3D part instance in the player's viewport.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/ARController",
+        "name": "self"
+      },
+      {
+        "documentation": "@roblox/globaltype/ARController.CreateElement3D/params/1",
+        "name": "shape"
+      },
+      {
+        "documentation": "@roblox/globaltype/ARController.CreateElement3D/params/2",
+        "name": "properties"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/ARController.CreateElement3D/returns/0"
+    ]
+  },
+  "@roblox/globaltype/ARController.CreateElement3D/params/1": {
+    "documentation": "The `Enum.PartType` of the part."
+  },
+  "@roblox/globaltype/ARController.CreateElement3D/params/2": {
+    "documentation": "The part properties to apply."
+  },
+  "@roblox/globaltype/ARController.CreateElement3D/returns/0": {
+    "documentation": "The created part instance."
+  },
+  "@roblox/globaltype/ARController.CursorMoved": {
+    "documentation": "Fired when a player's cursor updates."
+  },
+  "@roblox/globaltype/ARController.CursorPressed": {
+    "documentation": "Fired when a player left clicks."
+  },
+  "@roblox/globaltype/ARController.CursorReleased": {
+    "documentation": "Fired when a player releases the left click button."
+  },
+  "@roblox/globaltype/ARController.GetCursor": {
+    "documentation": "Returns the part owner's cursor, or any other player's cursor if the owner does not have a cursor (this is considered the primary user).",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/ARController",
+        "name": "self"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/ARController.GetCursor/returns/0"
+    ]
+  },
+  "@roblox/globaltype/ARController.GetCursor/returns/0": {
+    "documentation": "The cursor of the primary user."
+  },
+  "@roblox/globaltype/ARController.GetCursors": {
+    "documentation": "Gets a dictionary of player usernames to their cursors.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/ARController",
+        "name": "self"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/ARController.GetCursors/returns/0"
+    ]
+  },
+  "@roblox/globaltype/ARController.GetCursors/returns/0": {
+    "documentation": "A dictionary of player usernames to their cursors."
+  },
+  "@roblox/globaltype/ARController.KeyPressed": {},
+  "@roblox/globaltype/ARController.OnClick": {
+    "documentation": "Fires when the object is clicked."
+  },
+  "@roblox/globaltype/ARController.Transparency": {
+    "documentation": "The transparency of the AR display."
+  },
+  "@roblox/globaltype/ARController.UserInput": {},
+  "@roblox/globaltype/ARCursor": {
+    "keys": {
+      "Camera": "@roblox/globaltype/ARCursor.Camera",
+      "Hit": "@roblox/globaltype/ARCursor.Hit",
+      "MouseDelta": "@roblox/globaltype/ARCursor.MouseDelta",
+      "Origin": "@roblox/globaltype/ARCursor.Origin",
+      "Player": "@roblox/globaltype/ARCursor.Player",
+      "Pressed": "@roblox/globaltype/ARCursor.Pressed",
+      "ScreenPosition": "@roblox/globaltype/ARCursor.ScreenPosition",
+      "Target": "@roblox/globaltype/ARCursor.Target",
+      "UnitRay": "@roblox/globaltype/ARCursor.UnitRay",
+      "UserCFrames": "@roblox/globaltype/ARCursor.UserCFrames",
+      "UserId": "@roblox/globaltype/ARCursor.UserId",
+      "UserInput": "@roblox/globaltype/ARCursor.UserInput",
+      "VirtualTarget": "@roblox/globaltype/ARCursor.VirtualTarget",
+      "VirtualWorldPosition": "@roblox/globaltype/ARCursor.VirtualWorldPosition",
+      "WorldPosition": "@roblox/globaltype/ARCursor.WorldPosition",
+      "X": "@roblox/globaltype/ARCursor.X",
+      "Y": "@roblox/globaltype/ARCursor.Y"
+    }
+  },
+  "@roblox/globaltype/ARCursor.Camera": {
+    "documentation": "The camera of the player associated with the mouse."
+  },
+  "@roblox/globaltype/ARCursor.Hit": {
+    "documentation": "The <code>CFrame</code> the user's mouse is located at.",
+    "learn_more_link": "https://create.roblox.com/docs/reference/engine/classes/Mouse#Hit"
+  },
+  "@roblox/globaltype/ARCursor.MouseDelta": {
+    "documentation": "The current delta of the mouse for the frame that was sent."
+  },
+  "@roblox/globaltype/ARCursor.Origin": {
+    "documentation": "A <code>CFrame</code> indicating where the mouse originated from. It is positioned at the camera and oriented toward the mouse's 3D position.",
+    "learn_more_link": "https://create.roblox.com/docs/reference/engine/classes/Mouse#Origin"
+  },
+  "@roblox/globaltype/ARCursor.Player": {
+    "documentation": "The name of the player the cursor is for."
+  },
+  "@roblox/globaltype/ARCursor.Pressed": {
+    "documentation": "A boolean for whether or not the mouse button is pressed."
+  },
+  "@roblox/globaltype/ARCursor.ScreenPosition": {
+    "documentation": "The XY screen position of the mouse cursor."
+  },
+  "@roblox/globaltype/ARCursor.Target": {
+    "documentation": "The PartObject that is being hovered over. You can call methods on this part!"
+  },
+  "@roblox/globaltype/ARCursor.UnitRay": {
+    "documentation": "A <code>Ray</code> directed toward the mouse's position in 3D space. It originates from the <code>CFrame</code> of the camera. Like all unit rays, it has a magnitude of 1.",
+    "learn_more_link": "https://create.roblox.com/docs/reference/engine/classes/Mouse#UnitRay"
+  },
+  "@roblox/globaltype/ARCursor.UserCFrames": {
+    "documentation": "Contains <code>Head</code>, <code>LeftHand</code>, and <code>RightHand</code> for VR."
+  },
+  "@roblox/globaltype/ARCursor.UserId": {
+    "documentation": "The user ID of the player."
+  },
+  "@roblox/globaltype/ARCursor.UserInput": {
+    "documentation": "A table of input data (would suggest printing with repr) - Contains Mouse, Keyboard, Gamepad, VREnabled, KeyboardEnabled, TouchEnabled, GamepadEnabled, and LastInputType."
+  },
+  "@roblox/globaltype/ARCursor.VirtualTarget": {
+    "documentation": "The hovered part in the virtual 3D space."
+  },
+  "@roblox/globaltype/ARCursor.VirtualWorldPosition": {
+    "documentation": "The world position of the mouse cursor in the virtual 3D space."
+  },
+  "@roblox/globaltype/ARCursor.WorldPosition": {
+    "documentation": "The world position of the mouse cursor."
+  },
+  "@roblox/globaltype/ARCursor.X": {
+    "documentation": "The X position of the cursor on the screen.",
+    "learn_more_link": "https://create.roblox.com/docs/reference/engine/classes/Mouse#X"
+  },
+  "@roblox/globaltype/ARCursor.Y": {
+    "documentation": "The Y position of the cursor on the screen.",
+    "learn_more_link": "https://create.roblox.com/docs/reference/engine/classes/Mouse#Y"
+  },
+  "@roblox/globaltype/Aerogel": {
+    "documentation": "An incredibly light material that is very fragile.",
+    "keys": {}
+  },
+  "@roblox/globaltype/AirSupply": {
+    "documentation": "Generates a 300 stud radius oxygen bubble when powered on. Very important part for space ships, as it acts as the oxygen supply for the ship.",
+    "keys": {
+      "Loop": "@roblox/globaltype/AirSupply.Loop"
+    }
+  },
+  "@roblox/globaltype/AirSupply.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/AlienCore": {
+    "documentation": "A mysterious piece of technology found within many robotic aliens.\nAlthough its precise function is unknown, it manages to be extremely useful in advanced technologies.\nIt seems to emanate raw power on its own, but only these robotic constructions seem to know .\nGenerally, more powerful aliens will utilize more alien cores.",
+    "keys": {}
+  },
+  "@roblox/globaltype/Aluminum": {
+    "documentation": "A light material useful for air transport. Isn't very durable.",
+    "keys": {}
+  },
+  "@roblox/globaltype/Anchor": {
+    "documentation": "When triggered or clicked, it is able to be anchored, a state in which it is immovable by physics, and applies to parts connected to it. ",
+    "keys": {
+      "Anchored": "@roblox/globaltype/Anchor.Anchored",
+      "Configured": "@roblox/globaltype/Anchor.Configured",
+      "OnClick": "@roblox/globaltype/Anchor.OnClick",
+      "Triggered": "@roblox/globaltype/Anchor.Triggered"
+    }
+  },
+  "@roblox/globaltype/Anchor.Anchored": {
+    "documentation": "Determines whether the anchor is active or not."
+  },
+  "@roblox/globaltype/Anchor.Configured": {
+    "documentation": "Fires when the object is configured."
+  },
+  "@roblox/globaltype/Anchor.OnClick": {
+    "documentation": "Fires when the object is clicked."
+  },
+  "@roblox/globaltype/Anchor.Triggered": {
+    "documentation": "Fires when the object is triggered."
+  },
+  "@roblox/globaltype/Antenna": {
+    "documentation": "A wireless transmitter that can transmit electricity from wires and trigger signals from trigger wires and buttons.",
+    "keys": {
+      "AntennaID": "@roblox/globaltype/Antenna.AntennaID"
+    }
+  },
+  "@roblox/globaltype/Antenna.AntennaID": {
+    "documentation": "The ID of this antenna, to transmit to others with the same ID."
+  },
+  "@roblox/globaltype/Apparel": {
+    "documentation": "A piece of clothing that can be worn by other players. Parts can also be attached to the apparel, meaning you can create your own suits with the apprel.\nIt is similar to the prosthetic, except it can be taken off and does not cause damage. However, electricity does not trasmit throughout the apparel unlike prosthetics.\n\nApparel can also holds less parts than the prosthetic. It can only hold 25 parts, while Prosthetics can hold 50.\n\nApparel has another configuration to it called Transparency, which dictates how transparent it will become when worn. Ranges from 0-1 from non-transparent to transparent.\n\t",
+    "keys": {
+      "Configured": "@roblox/globaltype/Apparel.Configured",
+      "Limb": "@roblox/globaltype/Apparel.Limb",
+      "Loop": "@roblox/globaltype/Apparel.Loop",
+      "OnClick": "@roblox/globaltype/Apparel.OnClick",
+      "Transparency": "@roblox/globaltype/Apparel.Transparency"
+    }
+  },
+  "@roblox/globaltype/Apparel.Configured": {
+    "documentation": "Fires when the object is configured."
+  },
+  "@roblox/globaltype/Apparel.Limb": {
+    "documentation": "The name of the limb that this Apparel is for."
+  },
+  "@roblox/globaltype/Apparel.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/Apparel.OnClick": {
+    "documentation": "Fires when the object is clicked."
+  },
+  "@roblox/globaltype/Apparel.Transparency": {
+    "documentation": "The transparency of this Apparel."
+  },
+  "@roblox/globaltype/Artillery": {
+    "documentation": "Fires a fast-moving metal shell upon being triggered.\nThis metal shell generates a small explosion upon impact.\nCosts 15 iron per shot.",
+    "keys": {
+      "OnClick": "@roblox/globaltype/Artillery.OnClick",
+      "Triggered": "@roblox/globaltype/Artillery.Triggered"
+    }
+  },
+  "@roblox/globaltype/Artillery.OnClick": {
+    "documentation": "Fires when the object is clicked."
+  },
+  "@roblox/globaltype/Artillery.Triggered": {
+    "documentation": "Fires when the object is triggered."
+  },
+  "@roblox/globaltype/Asphalt": {
+    "documentation": "A modern material useful for smooth road surfaces.\nIts durability triples when anchored.",
+    "keys": {
+      "Loop": "@roblox/globaltype/Asphalt.Loop"
+    }
+  },
+  "@roblox/globaltype/Asphalt.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/Assembler": {
+    "documentation": "Assembles items as configured when the structure is supplied with the required power and resources.",
+    "keys": {
+      "Assemble": "@roblox/globaltype/Assembler.Assemble",
+      "CalculateCraftingRecipe": "@roblox/globaltype/Assembler.CalculateCraftingRecipe",
+      "Configured": "@roblox/globaltype/Assembler.Configured",
+      "Craft": "@roblox/globaltype/Assembler.Craft",
+      "CraftItems": "@roblox/globaltype/Assembler.CraftItems",
+      "GetCraftCooldown": "@roblox/globaltype/Assembler.GetCraftCooldown",
+      "GetInventory": "@roblox/globaltype/Assembler.GetInventory",
+      "GetRecipe": "@roblox/globaltype/Assembler.GetRecipe",
+      "Loop": "@roblox/globaltype/Assembler.Loop"
+    }
+  },
+  "@roblox/globaltype/Assembler.Assemble": {
+    "documentation": "The name of the object to be assembled."
+  },
+  "@roblox/globaltype/Assembler.CalculateCraftingRecipe": {
+    "documentation": "@deprecated -- Use `Assembler:GetRecipe` instead",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Assembler",
+        "name": "self"
+      },
+      {
+        "documentation": "@roblox/globaltype/Assembler.CalculateCraftingRecipe/params/1",
+        "name": "items"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/Assembler.CalculateCraftingRecipe/returns/0"
+    ]
+  },
+  "@roblox/globaltype/Assembler.CalculateCraftingRecipe/params/1": {
+    "documentation": "A list of parts **OR** A dictionary of each part with how many of said part to craft."
+  },
+  "@roblox/globaltype/Assembler.CalculateCraftingRecipe/returns/0": {},
+  "@roblox/globaltype/Assembler.Configured": {
+    "documentation": "Fires when the object is configured."
+  },
+  "@roblox/globaltype/Assembler.Craft": {
+    "documentation": "Will pause and craft the desired item at the next available point, returning a boolean representing whether or not the item was successfully crafted.\n\nThis uses a queue under the hood, the first thing to call it gets to craft first, and then finally the assembler performs its configured craft if nothing else is queued.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Assembler",
+        "name": "self"
+      },
+      {
+        "name": "itemName"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/Assembler.Craft/returns/0"
+    ]
+  },
+  "@roblox/globaltype/Assembler.Craft/returns/0": {},
+  "@roblox/globaltype/Assembler.CraftItems": {
+    "documentation": "@deprecated -- Use `Assembler:Craft` instead.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Assembler",
+        "name": "self"
+      },
+      {
+        "name": "items"
+      }
+    ]
+  },
+  "@roblox/globaltype/Assembler.GetCraftCooldown": {
+    "documentation": "@deprecated -- `Assembler:GetCraftCooldown()` has been deprecated and always returns 0",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Assembler",
+        "name": "self"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/Assembler.GetCraftCooldown/returns/0"
+    ]
+  },
+  "@roblox/globaltype/Assembler.GetCraftCooldown/returns/0": {},
+  "@roblox/globaltype/Assembler.GetInventory": {
+    "documentation": "@deprecated -- `Assembler:GetInventory()` has been deprecated and always returns an empty, frozen table",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Assembler",
+        "name": "self"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/Assembler.GetInventory/returns/0"
+    ]
+  },
+  "@roblox/globaltype/Assembler.GetInventory/returns/0": {},
+  "@roblox/globaltype/Assembler.GetRecipe": {
+    "documentation": "Returns the resource(s) required to craft the given item, or nil if the item doesn't have a recipe/doesn't exist.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Assembler",
+        "name": "self"
+      },
+      {
+        "name": "itemName"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/Assembler.GetRecipe/returns/0"
+    ]
+  },
+  "@roblox/globaltype/Assembler.GetRecipe/returns/0": {},
+  "@roblox/globaltype/Assembler.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/AutomaticLaser": {
+    "documentation": "Fires a continous set of lasers when powered. Like most other energy/thermal weapons, it generates heat when powered. It generates up to 65 degrees of heat, meaning you will need atleast 2 or 3 coolers.",
+    "keys": {
+      "Loop": "@roblox/globaltype/AutomaticLaser.Loop"
+    }
+  },
+  "@roblox/globaltype/AutomaticLaser.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/Ball": {
+    "documentation": "A ball shaped template object.",
+    "keys": {}
+  },
+  "@roblox/globaltype/BallastTank": {
+    "documentation": "Allows for variable ballast to be added to sea vehicles. Also prevents corrosion to attached parts underwater. ",
+    "keys": {
+      "Buoyancy": "@roblox/globaltype/BallastTank.Buoyancy",
+      "Loop": "@roblox/globaltype/BallastTank.Loop"
+    }
+  },
+  "@roblox/globaltype/BallastTank.Buoyancy": {
+    "documentation": "The buoyancy of this BallastTank, 0 being neutral."
+  },
+  "@roblox/globaltype/BallastTank.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/Balloon": {
+    "documentation": "Levitates parts attached to it to a certain configurable height.\nHowever, it is easily poppable.\nDoes not work in space, or no-atmosphere planets.",
+    "keys": {
+      "Buoyancy": "@roblox/globaltype/Balloon.Buoyancy",
+      "Configured": "@roblox/globaltype/Balloon.Configured"
+    }
+  },
+  "@roblox/globaltype/Balloon.Buoyancy": {
+    "documentation": "The buoyancy of this Balloon, 0 being neutral."
+  },
+  "@roblox/globaltype/Balloon.Configured": {
+    "documentation": "Fires when the object is configured."
+  },
+  "@roblox/globaltype/Battery": {
+    "documentation": "A light part that contains 400 energy and is prefilled. Can be refilled.",
+    "keys": {}
+  },
+  "@roblox/globaltype/Beacon": {
+    "documentation": "Creates a small beacon of light when powered. \n\tWhen 'ShowOnMap\\' is enabled, it broadcasts a signal into the universe.\n\t\\'BeaconName\\' changes the name of the beacon shown on the starmap. \n\t30 second cooldown for changing the configurables.",
+    "keys": {
+      "BeaconName": "@roblox/globaltype/Beacon.BeaconName",
+      "Configured": "@roblox/globaltype/Beacon.Configured",
+      "ShowOnMap": "@roblox/globaltype/Beacon.ShowOnMap"
+    }
+  },
+  "@roblox/globaltype/Beacon.BeaconName": {
+    "documentation": "The name of the beacon."
+  },
+  "@roblox/globaltype/Beacon.Configured": {
+    "documentation": "Fires when the object is configured."
+  },
+  "@roblox/globaltype/Beacon.ShowOnMap": {
+    "documentation": "Whether this beacon should be shown on StarMaps."
+  },
+  "@roblox/globaltype/Beryllium": {
+    "documentation": "A lightweight metal only found on Barren planets used for preventing plutonium cores from going supercritical until detonated.",
+    "keys": {}
+  },
+  "@roblox/globaltype/Bin": {
+    "documentation": "Stores solid items such as Aluminum, Iron, Faucets, etc. \nCan store up to 1000 items. When destroyed, every item inside will also be destroyed. \nThe value increases as more items are added to it.\n\nBins can also be used as crafting recipes, with the resources inside being used.\nYou can also configure a bin to prevent items from being crafted from it, allowing for bins to be strictly for machine storage.\n\t",
+    "keys": {
+      "CanBeCraftedFrom": "@roblox/globaltype/Bin.CanBeCraftedFrom",
+      "OnClick": "@roblox/globaltype/Bin.OnClick",
+      "Resource": "@roblox/globaltype/Bin.Resource"
+    }
+  },
+  "@roblox/globaltype/Bin.CanBeCraftedFrom": {
+    "documentation": "Determines whether this bin can be used by nearby players to craft objects."
+  },
+  "@roblox/globaltype/Bin.OnClick": {
+    "documentation": "Fires when the object is clicked."
+  },
+  "@roblox/globaltype/Bin.Resource": {
+    "documentation": "The kind of resource the bin can hold. You can set this to Any to allow the bin to accept anything."
+  },
+  "@roblox/globaltype/BlackBox": {
+    "documentation": "Records all activity in the region using very delicate instruments.\nActivates when locked and anchors to ensure accurate readings.\nONLINE = Listening for event/Sharing event data, DATA = New data the owner hasn't seen.\n\t\t\n",
+    "keys": {
+      "GetLogs": "@roblox/globaltype/BlackBox.GetLogs",
+      "Loop": "@roblox/globaltype/BlackBox.Loop",
+      "OnClick": "@roblox/globaltype/BlackBox.OnClick"
+    }
+  },
+  "@roblox/globaltype/BlackBox.GetLogs": {
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/BlackBox",
+        "name": "self"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/BlackBox.GetLogs/returns/0"
+    ]
+  },
+  "@roblox/globaltype/BlackBox.GetLogs/returns/0": {},
+  "@roblox/globaltype/BlackBox.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/BlackBox.OnClick": {
+    "documentation": "Fires when the object is clicked."
+  },
+  "@roblox/globaltype/BlastingCap": {
+    "documentation": "A component used in crafting recipes for more advanced explosive devices.",
+    "keys": {}
+  },
+  "@roblox/globaltype/Boiler": {
+    "documentation": "Turns water to steam when fueled with 2 water and 1 coal.",
+    "keys": {
+      "Loop": "@roblox/globaltype/Boiler.Loop"
+    }
+  },
+  "@roblox/globaltype/Boiler.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/Boombox": {
+    "documentation": "Must be powered in order to play music. When clicked, it will toggle playing music and will play the song id you give it.",
+    "keys": {
+      "Audio": "@roblox/globaltype/Boombox.Audio",
+      "Loop": "@roblox/globaltype/Boombox.Loop",
+      "OnClick": "@roblox/globaltype/Boombox.OnClick",
+      "Triggered": "@roblox/globaltype/Boombox.Triggered"
+    }
+  },
+  "@roblox/globaltype/Boombox.Audio": {
+    "documentation": "The audio asset ID to be played."
+  },
+  "@roblox/globaltype/Boombox.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/Boombox.OnClick": {
+    "documentation": "Fires when the object is clicked."
+  },
+  "@roblox/globaltype/Boombox.Triggered": {
+    "documentation": "Fires when the object is triggered."
+  },
+  "@roblox/globaltype/Brick": {
+    "documentation": "A cheap material made from baked clay useful for building houses.\nIts durability doubles when anchored on a planet.",
+    "keys": {
+      "Loop": "@roblox/globaltype/Brick.Loop"
+    }
+  },
+  "@roblox/globaltype/Brick.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/BurnerGenerator": {
+    "documentation": "Creates electricity when fueled with coal.",
+    "keys": {
+      "Loop": "@roblox/globaltype/BurnerGenerator.Loop"
+    }
+  },
+  "@roblox/globaltype/BurnerGenerator.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/BurstLaser": {
+    "documentation": "Fires 5 rapid sets of concentrated laser beams. Each beam does a mediate amount of damage.\nCosts 100 power for each beam fired, meaning the total power cost is 500 power.",
+    "keys": {
+      "OnClick": "@roblox/globaltype/BurstLaser.OnClick",
+      "Triggered": "@roblox/globaltype/BurstLaser.Triggered"
+    }
+  },
+  "@roblox/globaltype/BurstLaser.OnClick": {
+    "documentation": "Fires when the object is clicked."
+  },
+  "@roblox/globaltype/BurstLaser.Triggered": {
+    "documentation": "Fires when the object is triggered."
+  },
+  "@roblox/globaltype/Button": {
+    "documentation": "Sends trigger signals when clicked by a player.\nWhen connected to a seat and the input key is configured/configureed, the player sitting in the seat can activate the button by pressing the corresponding key.\nTriggerMode 0: Trigger on key down\nTriggerMode 1: Trigger on key up\nTriggerMode 2: Trigger on key down and key up",
+    "keys": {}
+  },
+  "@roblox/globaltype/Camera": {
+    "documentation": "It's a camera.\nWhen a camera has the same ID as a screen, that screen will display the camera view.\nClicking on a screen that is displaying the view of a camera will allow you to directly view what the camera is seeing.\nNo power is necessary.",
+    "keys": {
+      "Configured": "@roblox/globaltype/Camera.Configured",
+      "VideoID": "@roblox/globaltype/Camera.VideoID"
+    }
+  },
+  "@roblox/globaltype/Camera.Configured": {
+    "documentation": "Fires when the object is configured."
+  },
+  "@roblox/globaltype/Camera.VideoID": {
+    "documentation": "The ID to transmit the camera feed over, received by screens of the same ID."
+  },
+  "@roblox/globaltype/Cannon": {
+    "documentation": "Fires a cannon ball when triggered or clicked.\nMust be supplied with an ammo material.\nIron is prioritized, and results in one large cannonball being shot.\nCopper results in grapeshot.",
+    "keys": {
+      "OnClick": "@roblox/globaltype/Cannon.OnClick",
+      "Triggered": "@roblox/globaltype/Cannon.Triggered"
+    }
+  },
+  "@roblox/globaltype/Cannon.OnClick": {
+    "documentation": "Fires when the object is clicked."
+  },
+  "@roblox/globaltype/Cannon.Triggered": {
+    "documentation": "Fires when the object is triggered."
+  },
+  "@roblox/globaltype/Cement": {
+    "documentation": "A modern material useful for pavement.",
+    "keys": {}
+  },
+  "@roblox/globaltype/Chute": {
+    "documentation": "Is able to transfer solid parts between objects such as bins and extractors.\n**Contrary to popular belief, chutes can transfer more than one type of object.**\n**This means you can mix assemblers and extractors into the same system, no need for different chutes for each object. You can just make one long chute and connect your factory to it.**",
+    "keys": {}
+  },
+  "@roblox/globaltype/Cleat": {
+    "documentation": "A textile resource similar to Rubber, except it has a high amount of friction and low bounciness. It can be used in physical machines such as the feet of mechs, etc.",
+    "keys": {}
+  },
+  "@roblox/globaltype/CloningBay": {
+    "documentation": "Similar to a SpawnPoint, but allows players to respawn at the location from far away even at another region.\nIt is pretty much a cross region spawnpoint. However, you can only have one cloning bay at a time.\nWhen powered, it will appear in your death menu when you die and you can click it to spawn at this location.\nHowever, you should pair the CloningBay with a spawn point next to it to ensure you spawn at the cloning bay.",
+    "keys": {
+      "Name": "@roblox/globaltype/CloningBay.Name"
+    }
+  },
+  "@roblox/globaltype/CloningBay.Name": {
+    "documentation": "The name of the cloning bay."
+  },
+  "@roblox/globaltype/Cloth": {
+    "documentation": "A soft thin fabric that can soak up liquids.",
+    "keys": {}
+  },
+  "@roblox/globaltype/Coal": {
+    "documentation": "A natural resource found abundant in mountains, and is commonly used as a source of generating heat and energy. Can be placed in a BurnerGenerator to generate energy.",
+    "keys": {}
+  },
+  "@roblox/globaltype/CombustionTurbine": {
+    "documentation": "Creates electricity when fueled by gasoline.",
+    "keys": {
+      "Loop": "@roblox/globaltype/CombustionTurbine.Loop"
+    }
+  },
+  "@roblox/globaltype/CombustionTurbine.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/ComponentObject": {
+    "documentation": "**NOTE**: Component objects do NOT follow the same conventions as part objects and are not backwards compatible with the WoS part APIs. Things like `:GetConfigurables()` are `:ListConfigurables()` instead. Things like `partObject.ConfigName` (setting/getting) are `:SetConfigurable` and `:GetConfigurable` respectively. Additionally, unlike part objects methods that involve the component's information can **never** be called if the component was deleted, with the **sole** exception being `:GetObject()` which returns `nil` when the component is deleted. Trying to call methods on a deleted component will produce warnings and return empty or nil data depending on the method. Components additionally do not utilize GUIDs in any way. Additionally, some events are always valid.",
+    "keys": {
+      "Click": "@roblox/globaltype/ComponentObject.Click",
+      "Configured": "@roblox/globaltype/ComponentObject.Configured",
+      "GetConfigurable": "@roblox/globaltype/ComponentObject.GetConfigurable",
+      "GetObject": "@roblox/globaltype/ComponentObject.GetObject",
+      "Installed": "@roblox/globaltype/ComponentObject.Installed",
+      "IsDestroyed": "@roblox/globaltype/ComponentObject.IsDestroyed",
+      "ListConfigurables": "@roblox/globaltype/ComponentObject.ListConfigurables",
+      "ListEvents": "@roblox/globaltype/ComponentObject.ListEvents",
+      "ListMethods": "@roblox/globaltype/ComponentObject.ListMethods",
+      "OnClick": "@roblox/globaltype/ComponentObject.OnClick",
+      "SetConfigurable": "@roblox/globaltype/ComponentObject.SetConfigurable",
+      "Trigger": "@roblox/globaltype/ComponentObject.Trigger",
+      "Triggered": "@roblox/globaltype/ComponentObject.Triggered",
+      "Uninstalled": "@roblox/globaltype/ComponentObject.Uninstalled"
+    }
+  },
+  "@roblox/globaltype/ComponentObject.Click": {
+    "documentation": "Emulates a click *only* for the component.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/ComponentObject",
+        "name": "self"
+      }
+    ]
+  },
+  "@roblox/globaltype/ComponentObject.Configured": {
+    "documentation": "Fires when the component is configured (Always valid)."
+  },
+  "@roblox/globaltype/ComponentObject.GetConfigurable": {
+    "documentation": "Retrieves a configuration.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/ComponentObject",
+        "name": "self"
+      },
+      {
+        "name": "configurableName"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/ComponentObject.GetConfigurable/returns/0"
+    ]
+  },
+  "@roblox/globaltype/ComponentObject.GetConfigurable/returns/0": {},
+  "@roblox/globaltype/ComponentObject.GetObject": {
+    "documentation": "Retrieves the part object the component is installed on.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/ComponentObject",
+        "name": "self"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/ComponentObject.GetObject/returns/0"
+    ]
+  },
+  "@roblox/globaltype/ComponentObject.GetObject/returns/0": {},
+  "@roblox/globaltype/ComponentObject.Installed": {
+    "documentation": "Fires when the component is installed onto something (Always valid)."
+  },
+  "@roblox/globaltype/ComponentObject.IsDestroyed": {
+    "documentation": "Returns whether or not the component is deleted.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/ComponentObject",
+        "name": "self"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/ComponentObject.IsDestroyed/returns/0"
+    ]
+  },
+  "@roblox/globaltype/ComponentObject.IsDestroyed/returns/0": {},
+  "@roblox/globaltype/ComponentObject.ListConfigurables": {
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/ComponentObject",
+        "name": "self"
+      }
+    ]
+  },
+  "@roblox/globaltype/ComponentObject.ListEvents": {
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/ComponentObject",
+        "name": "self"
+      }
+    ]
+  },
+  "@roblox/globaltype/ComponentObject.ListMethods": {
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/ComponentObject",
+        "name": "self"
+      }
+    ]
+  },
+  "@roblox/globaltype/ComponentObject.OnClick": {
+    "documentation": "Fires when the object is clicked."
+  },
+  "@roblox/globaltype/ComponentObject.SetConfigurable": {
+    "documentation": "Sets a configuration.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/ComponentObject",
+        "name": "self"
+      },
+      {
+        "name": "configurableName"
+      },
+      {
+        "name": "value"
+      }
+    ]
+  },
+  "@roblox/globaltype/ComponentObject.Trigger": {
+    "documentation": "Emulates a trigger signal *only* for the component.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/ComponentObject",
+        "name": "self"
+      }
+    ]
+  },
+  "@roblox/globaltype/ComponentObject.Triggered": {
+    "documentation": "Fires when the object the component is on is triggered."
+  },
+  "@roblox/globaltype/ComponentObject.Uninstalled": {
+    "documentation": "Fires when the component is uninstalled from whatever it's installed onto. You can check `:IsDestroyed()` here to see if it was deleted (Always valid)."
+  },
+  "@roblox/globaltype/Cone": {
+    "documentation": "A cone shaped template object.",
+    "keys": {}
+  },
+  "@roblox/globaltype/Constructor": {
+    "documentation": "Similar to an assembler, but constructs a model when triggered. However, the constructor must be supplied with the correct materials for a model.\nFor example, a car model requiring 50 iron and 3 a bin attached with 50 iron, a bin attached with 30 wires and 100 power.\n\t\t\nYou can find out how many materials you need through the model loader gui.\nHas a 60 second cool down or a minute cooldown to prevent model spamming.",
+    "keys": {
+      "Autolock": "@roblox/globaltype/Constructor.Autolock",
+      "CalculateModelRecipe": "@roblox/globaltype/Constructor.CalculateModelRecipe",
+      "Configured": "@roblox/globaltype/Constructor.Configured",
+      "ModelCode": "@roblox/globaltype/Constructor.ModelCode",
+      "RelativeToConstructor": "@roblox/globaltype/Constructor.RelativeToConstructor",
+      "Triggered": "@roblox/globaltype/Constructor.Triggered"
+    }
+  },
+  "@roblox/globaltype/Constructor.Autolock": {
+    "documentation": "Determines if the created model should be locked by the owner of the Constructor."
+  },
+  "@roblox/globaltype/Constructor.CalculateModelRecipe": {
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Constructor",
+        "name": "self"
+      },
+      {
+        "name": "..."
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/Constructor.CalculateModelRecipe/returns/0"
+    ]
+  },
+  "@roblox/globaltype/Constructor.CalculateModelRecipe/returns/0": {},
+  "@roblox/globaltype/Constructor.Configured": {
+    "documentation": "Fires when the object is configured."
+  },
+  "@roblox/globaltype/Constructor.ModelCode": {
+    "documentation": "The model data of the model to be created by the Constructor."
+  },
+  "@roblox/globaltype/Constructor.RelativeToConstructor": {
+    "documentation": "Determines if the created model should be loaded in relative to the orientation of the Constructor."
+  },
+  "@roblox/globaltype/Constructor.Triggered": {
+    "documentation": "Fires when the object is triggered."
+  },
+  "@roblox/globaltype/ContainerObject": {
+    "keys": {
+      "ContainerChanged": "@roblox/globaltype/ContainerObject.ContainerChanged",
+      "GetAmount": "@roblox/globaltype/ContainerObject.GetAmount",
+      "GetResource": "@roblox/globaltype/ContainerObject.GetResource",
+      "GetResourceAmount": "@roblox/globaltype/ContainerObject.GetResourceAmount"
+    }
+  },
+  "@roblox/globaltype/ContainerObject.ContainerChanged": {
+    "documentation": "Fires when the amount of the item in the container changes. Note that <code>resourceType</code> describes the \"state\" (i.e., <code>Power</code> for powercell, <code>Solid</code> for bin, <code>Fluid</code> for tank) of the resource rather than the contents"
+  },
+  "@roblox/globaltype/ContainerObject.GetAmount": {
+    "documentation": "@deprecated -- Use `:GetResourceAmount` instead.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/ContainerObject",
+        "name": "self"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/ContainerObject.GetAmount/returns/0"
+    ]
+  },
+  "@roblox/globaltype/ContainerObject.GetAmount/returns/0": {},
+  "@roblox/globaltype/ContainerObject.GetResource": {
+    "documentation": "Gives you the name of the resource it contains, or the string \"nil\" if none (although this is likely a bug and should return actual nil, it just calls tostring on the resource kind)",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/ContainerObject",
+        "name": "self"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/ContainerObject.GetResource/returns/0"
+    ]
+  },
+  "@roblox/globaltype/ContainerObject.GetResource/returns/0": {},
+  "@roblox/globaltype/ContainerObject.GetResourceAmount": {
+    "documentation": "Gives you the total amount of stuff in the container.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/ContainerObject",
+        "name": "self"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/ContainerObject.GetResourceAmount/returns/0"
+    ]
+  },
+  "@roblox/globaltype/ContainerObject.GetResourceAmount/returns/0": {},
+  "@roblox/globaltype/Controller": {
+    "documentation": "Alters the speed of attached Controllable objects which include: Engine, Motor, BallastTank, IonDrive, IonRocket, Thruster, Rocket. Must use a polysilicon between this controller and \n\tan object that emits a trigger signal(like a button) to use the same events as clicking the UI. For example, FlipFlop will set the speed of the Controllable objects to 0, Deactivate will subtract 5 from the current speed, etc.",
+    "keys": {
+      "Loop": "@roblox/globaltype/Controller.Loop",
+      "Triggered": "@roblox/globaltype/Controller.Triggered"
+    }
+  },
+  "@roblox/globaltype/Controller.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/Controller.Triggered": {
+    "documentation": "Fires when the object is triggered."
+  },
+  "@roblox/globaltype/ConveyorBelt": {
+    "documentation": "Moves objects ontop of it towards the front of the conveyor belt. Only moves when powered and anchored or attached to the ground.",
+    "keys": {
+      "ConveyorBeltSpeed": "@roblox/globaltype/ConveyorBelt.ConveyorBeltSpeed"
+    }
+  },
+  "@roblox/globaltype/ConveyorBelt.ConveyorBeltSpeed": {
+    "documentation": "Determines the speed at which the conveyor will move items on top of it."
+  },
+  "@roblox/globaltype/Cooler": {
+    "documentation": "Cools down the heat around a space when supplied with power. \nGlows blue while functioning. Can be used to provide a cool environment in hot areas. \nIs also useful for cooling down objects such as iondrives and engines.\nCooling amount is based on size -20 * X * Y * Z / 16",
+    "keys": {}
+  },
+  "@roblox/globaltype/Copper": {
+    "documentation": "A brown shiny metal, the forefather of electronics.",
+    "keys": {}
+  },
+  "@roblox/globaltype/CornerRoundWedge": {
+    "documentation": "A rounded corner shaped template object.",
+    "keys": {}
+  },
+  "@roblox/globaltype/CornerRoundWedge2": {
+    "documentation": "A corner shaped template object rounded inwards.",
+    "keys": {}
+  },
+  "@roblox/globaltype/CornerTetra": {
+    "documentation": "A template which is a tetrahedron subtracted from a cube.",
+    "keys": {}
+  },
+  "@roblox/globaltype/CornerWedge": {
+    "documentation": "A corner wedge shaped template object.",
+    "keys": {}
+  },
+  "@roblox/globaltype/Coupler": {
+    "documentation": "The coupler is a part that allows the coupling/connection of vehicles and objects when powered. Both couplers must be powered in order to couple together.\nWhen the coupler comes in contact with another coupler, the couplers will both connect to eachother, both holes facing eachother. \nTo ensure no weld complications, make sure the couplers' triangles are facing upwards. When the couplers connect, the white triangles will make a square.\nCouplers also only couple to other couples with the same CouplerID.\n",
+    "keys": {
+      "AutoTrigger": "@roblox/globaltype/Coupler.AutoTrigger",
+      "CouplerID": "@roblox/globaltype/Coupler.CouplerID"
+    }
+  },
+  "@roblox/globaltype/Coupler.AutoTrigger": {
+    "documentation": "Whether or not the coupler should emit trigger signals while in range of another valid coupler."
+  },
+  "@roblox/globaltype/Coupler.CouplerID": {
+    "documentation": "The ID of this coupler."
+  },
+  "@roblox/globaltype/CrudeWing": {
+    "documentation": "Creates lift from being pushed forward.\nA worse version of a Wing.\nDoes not work in space or in non atmospheric planets.",
+    "keys": {
+      "Loop": "@roblox/globaltype/CrudeWing.Loop"
+    }
+  },
+  "@roblox/globaltype/CrudeWing.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/Cylinder": {
+    "documentation": "A cylinder shaped template object.",
+    "keys": {}
+  },
+  "@roblox/globaltype/DarkConverter": {
+    "documentation": "Converts attached dark matter bins into energy. 1 unit of dark matter is equal to 1000 watts of power. However, this generates a ton of heat in the process, nearly up to 200 degrees when activated. This means you will need about 10 coolers to avoid combustion.",
+    "keys": {
+      "Loop": "@roblox/globaltype/DarkConverter.Loop"
+    }
+  },
+  "@roblox/globaltype/DarkConverter.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/DarkMatter": {
+    "documentation": "A very valuable material extracted from black holes and a few empty regions in space. \nUsed primarily for weapons, but can also be convertred into energy and for other ingredients via DarkConverter.",
+    "keys": {}
+  },
+  "@roblox/globaltype/DarkReactor": {
+    "documentation": "Generates Dark Matter when powered and near a black hole.\nThe reactor is very unstable, and if the reactor overheats it will cause a huge explosion.\n\nThe DarkReactor generates up to 500 degrees of temperature, meaing you will need atleast 25 coolers to cool the reactor to make sure it does not overheat.",
+    "keys": {
+      "Loop": "@roblox/globaltype/DarkReactor.Loop"
+    }
+  },
+  "@roblox/globaltype/DarkReactor.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/DelayWire": {
+    "documentation": "Similar to a regular trigger wire, but depending on the configuration will wait x seconds before the trigger signal passes through.",
+    "keys": {
+      "DelayTime": "@roblox/globaltype/DelayWire.DelayTime"
+    }
+  },
+  "@roblox/globaltype/DelayWire.DelayTime": {
+    "documentation": "The time in seconds that it takes for signals to pass through this wire."
+  },
+  "@roblox/globaltype/DeleteSwitch": {
+    "documentation": "An object that deletes itself when triggered.",
+    "keys": {
+      "Triggered": "@roblox/globaltype/DeleteSwitch.Triggered"
+    }
+  },
+  "@roblox/globaltype/DeleteSwitch.Triggered": {
+    "documentation": "Fires when the object is triggered."
+  },
+  "@roblox/globaltype/Diamond": {
+    "keys": {}
+  },
+  "@roblox/globaltype/Diode": {
+    "documentation": "Allows electrical objects to interact with each other when connected by the diode, but only in its direction as depicted by an arrow.",
+    "keys": {}
+  },
+  "@roblox/globaltype/Disk": {
+    "keys": {
+      "Clear": "@roblox/globaltype/Disk.Clear",
+      "ClearDisk": "@roblox/globaltype/Disk.ClearDisk",
+      "Compress": "@roblox/globaltype/Disk.Compress",
+      "Decompress": "@roblox/globaltype/Disk.Decompress",
+      "Loop": "@roblox/globaltype/Disk.Loop",
+      "Read": "@roblox/globaltype/Disk.Read",
+      "ReadAll": "@roblox/globaltype/Disk.ReadAll",
+      "ReadEntireDisk": "@roblox/globaltype/Disk.ReadEntireDisk",
+      "Write": "@roblox/globaltype/Disk.Write",
+      "WriteAll": "@roblox/globaltype/Disk.WriteAll"
+    }
+  },
+  "@roblox/globaltype/Disk.Clear": {
+    "documentation": "Clears all the contents of the disk.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Disk",
+        "name": "self"
+      }
+    ]
+  },
+  "@roblox/globaltype/Disk.ClearDisk": {
+    "documentation": "@deprecated -- Use `:Clear` instead.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Disk",
+        "name": "self"
+      }
+    ]
+  },
+  "@roblox/globaltype/Disk.Compress": {
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Disk",
+        "name": "self"
+      },
+      {
+        "name": "..."
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/Disk.Compress/returns/0"
+    ]
+  },
+  "@roblox/globaltype/Disk.Compress/returns/0": {},
+  "@roblox/globaltype/Disk.Decompress": {
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Disk",
+        "name": "self"
+      },
+      {
+        "name": "..."
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/Disk.Decompress/returns/0"
+    ]
+  },
+  "@roblox/globaltype/Disk.Decompress/returns/0": {},
+  "@roblox/globaltype/Disk.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/Disk.Read": {
+    "documentation": "Reads the specified key from the disk and returns the value.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Disk",
+        "name": "self"
+      },
+      {
+        "name": "key"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/Disk.Read/returns/0"
+    ]
+  },
+  "@roblox/globaltype/Disk.Read/returns/0": {},
+  "@roblox/globaltype/Disk.ReadAll": {
+    "documentation": "Reads the entire content of the disk and outputs it as a dictionary.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Disk",
+        "name": "self"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/Disk.ReadAll/returns/0"
+    ]
+  },
+  "@roblox/globaltype/Disk.ReadAll/returns/0": {},
+  "@roblox/globaltype/Disk.ReadEntireDisk": {
+    "documentation": "@deprecated -- Use `:ReadAll` instead.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Disk",
+        "name": "self"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/Disk.ReadEntireDisk/returns/0"
+    ]
+  },
+  "@roblox/globaltype/Disk.ReadEntireDisk/returns/0": {},
+  "@roblox/globaltype/Disk.Write": {
+    "documentation": "Write the specified key with the specified value to the disk.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Disk",
+        "name": "self"
+      },
+      {
+        "name": "key"
+      },
+      {
+        "name": "value"
+      }
+    ]
+  },
+  "@roblox/globaltype/Disk.WriteAll": {
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Disk",
+        "name": "self"
+      },
+      {
+        "name": "..."
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/Disk.WriteAll/returns/0"
+    ]
+  },
+  "@roblox/globaltype/Disk.WriteAll/returns/0": {},
+  "@roblox/globaltype/Dispenser": {
+    "documentation": "Dispenses items from attached bins, similar to a faucet.\nCan also filter certain items from dispensing. Simply configure it to be a list of names. For example, \"Copper Iron Wire\"",
+    "keys": {
+      "Configured": "@roblox/globaltype/Dispenser.Configured",
+      "Dispense": "@roblox/globaltype/Dispenser.Dispense",
+      "Filter": "@roblox/globaltype/Dispenser.Filter",
+      "Loop": "@roblox/globaltype/Dispenser.Loop",
+      "OnClick": "@roblox/globaltype/Dispenser.OnClick",
+      "Triggered": "@roblox/globaltype/Dispenser.Triggered"
+    }
+  },
+  "@roblox/globaltype/Dispenser.Configured": {
+    "documentation": "Fires when the object is configured."
+  },
+  "@roblox/globaltype/Dispenser.Dispense": {
+    "documentation": "Dispenses a single item instantly.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Dispenser",
+        "name": "self"
+      }
+    ]
+  },
+  "@roblox/globaltype/Dispenser.Filter": {
+    "documentation": "Which kinds of resources to drop, separated by commas."
+  },
+  "@roblox/globaltype/Dispenser.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/Dispenser.OnClick": {
+    "documentation": "Fires when the object is clicked."
+  },
+  "@roblox/globaltype/Dispenser.Triggered": {
+    "documentation": "Fires when the object is triggered."
+  },
+  "@roblox/globaltype/DriveBox": {
+    "documentation": "When connected to a motor or engine with a rod, it will spin the same speed the engine or motor is going.\n(You must click the drivebox first when creating a rod.) ",
+    "keys": {
+      "Loop": "@roblox/globaltype/DriveBox.Loop",
+      "Ratio": "@roblox/globaltype/DriveBox.Ratio",
+      "Reversal": "@roblox/globaltype/DriveBox.Reversal"
+    }
+  },
+  "@roblox/globaltype/DriveBox.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/DriveBox.Ratio": {
+    "documentation": "The ratio of speed from 1 (1:100) to 100 (100:100) between this DriveBox and the source motor."
+  },
+  "@roblox/globaltype/DriveBox.Reversal": {
+    "documentation": "Determines whether the output should be reversed."
+  },
+  "@roblox/globaltype/ElectricFence": {
+    "documentation": "A special version of the fence which damages upon contact.\nRequires power to electrocute.",
+    "keys": {
+      "Loop": "@roblox/globaltype/ElectricFence.Loop"
+    }
+  },
+  "@roblox/globaltype/ElectricFence.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/Electromagnet": {
+    "documentation": "A powerful magnet.",
+    "keys": {}
+  },
+  "@roblox/globaltype/EnergyBomb": {
+    "documentation": "Causes a powerful explosion when triggered. Often used in space combat as a means of a powerful missile or torpedo.",
+    "keys": {
+      "Triggered": "@roblox/globaltype/EnergyBomb.Triggered"
+    }
+  },
+  "@roblox/globaltype/EnergyBomb.Damaged": {},
+  "@roblox/globaltype/EnergyBomb.Triggered": {
+    "documentation": "Fires when the object is triggered."
+  },
+  "@roblox/globaltype/EnergyGun": {
+    "documentation": "Fires a powerful shot of energy when provided power and triggered.",
+    "keys": {}
+  },
+  "@roblox/globaltype/EnergyShield": {
+    "documentation": "Creates a bubble made of energy that protects it from energy based weapons such as Lasers and Plasma Cannons.\n\nAn EnergyShield has a few sets of properties that you can fine tune to create a balanced shield.\nShieldRadius - The size of the entire shield. This will exponentially consume more power the higher the radius is. \nRegenerationSpeed - On a scale from 1 to 10 on how fast the shield will regenerate.\nShieldStrength - Scale from 1 to 10 on how much the shield can endure.\n\nRegenerationSpeed and ShieldStrength both combined can't be over 11.\nFor example, a regeneration speed of 6 and a shield strength of 5 is possible.\nHowever, a regeneration speed of 10 and a shield strength of 10 isn't, as 10 + 10 > 11\nA regeneration speed of 1 and a shield strength of 10 however is possible, since 11 = 11.\n\nAnother benefit for energy shields is that it blocks all warhead explosions, whether inside the shield or outside.",
+    "keys": {
+      "CalculateCost": "@roblox/globaltype/EnergyShield.CalculateCost",
+      "Configured": "@roblox/globaltype/EnergyShield.Configured",
+      "GetShieldHealth": "@roblox/globaltype/EnergyShield.GetShieldHealth",
+      "Loop": "@roblox/globaltype/EnergyShield.Loop",
+      "RegenerationSpeed": "@roblox/globaltype/EnergyShield.RegenerationSpeed",
+      "ShieldRadius": "@roblox/globaltype/EnergyShield.ShieldRadius",
+      "ShieldStrength": "@roblox/globaltype/EnergyShield.ShieldStrength"
+    }
+  },
+  "@roblox/globaltype/EnergyShield.CalculateCost": {
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/EnergyShield",
+        "name": "self"
+      },
+      {
+        "name": "..."
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/EnergyShield.CalculateCost/returns/0"
+    ]
+  },
+  "@roblox/globaltype/EnergyShield.CalculateCost/returns/0": {},
+  "@roblox/globaltype/EnergyShield.Configured": {
+    "documentation": "Fires when the object is configured."
+  },
+  "@roblox/globaltype/EnergyShield.GetShieldHealth": {
+    "documentation": "Gets the current health of the shield.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/EnergyShield",
+        "name": "self"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/EnergyShield.GetShieldHealth/returns/0"
+    ]
+  },
+  "@roblox/globaltype/EnergyShield.GetShieldHealth/returns/0": {},
+  "@roblox/globaltype/EnergyShield.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/EnergyShield.RegenerationSpeed": {
+    "documentation": "Determines how fast the shield regenerates after being hit."
+  },
+  "@roblox/globaltype/EnergyShield.ShieldRadius": {
+    "documentation": "The size of the entire shield. The shield exponentially consumes more power the higher this is."
+  },
+  "@roblox/globaltype/EnergyShield.ShieldStrength": {
+    "documentation": "Determines the shield's resistance to damage."
+  },
+  "@roblox/globaltype/Engine": {
+    "documentation": "It acts similar to a motor, but is powered by gasoline instead of electricity. ",
+    "keys": {
+      "Configured": "@roblox/globaltype/Engine.Configured",
+      "EngineSpeed": "@roblox/globaltype/Engine.EngineSpeed"
+    }
+  },
+  "@roblox/globaltype/Engine.Configured": {
+    "documentation": "Fires when the object is configured."
+  },
+  "@roblox/globaltype/Engine.EngineSpeed": {
+    "documentation": "Determines the speed at which the engine is driven."
+  },
+  "@roblox/globaltype/EthernetCable": {
+    "documentation": "Allows for the transfer of data between ports. Mostly utilized in programming.",
+    "keys": {}
+  },
+  "@roblox/globaltype/ExoticMatter": {
+    "documentation": "???",
+    "keys": {}
+  },
+  "@roblox/globaltype/Explosive": {
+    "documentation": "Causes an explosion when triggered. You can use a delay wire to make it explode after a few seconds and not immediately.",
+    "keys": {
+      "Triggered": "@roblox/globaltype/Explosive.Triggered"
+    }
+  },
+  "@roblox/globaltype/Explosive.Damaged": {},
+  "@roblox/globaltype/Explosive.Triggered": {
+    "documentation": "Fires when the object is triggered."
+  },
+  "@roblox/globaltype/Extractor": {
+    "documentation": "Extracts and harvests materials from connected terrain such as mountains and ore deposits. \nFor example, to extract coal you attach it to the coal deposit, and configure the extractor to extract Coal.\n\nThe extractor must be powered in order to work. Will not work if there's another powered extractor 50 studs away.\nIf connected to a bin, it will supply that bin with the given material it is tasked to extract.\nTwo powered extractors cannot be on the same ore deposit, or else they both will not function. \n\nIf the materials can't be added to a bin, they will spawn in front of the hole on the front of the extractor.\nHowever, if the extractor is blocked by an object, it will not spew out any materials which prevents an increase on lag.\n\t\t\nWhen tasked to extract wood, it will extract any trees near it.",
+    "keys": {
+      "Loop": "@roblox/globaltype/Extractor.Loop",
+      "MaterialToExtract": "@roblox/globaltype/Extractor.MaterialToExtract"
+    }
+  },
+  "@roblox/globaltype/Extractor.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/Extractor.MaterialToExtract": {
+    "documentation": "Determines the material to extract from connected natural surfaces."
+  },
+  "@roblox/globaltype/Faucet": {
+    "documentation": "Releases liquids and gases from containers.",
+    "keys": {}
+  },
+  "@roblox/globaltype/Fence": {
+    "documentation": "A metal fence. Primarily used to set up walls and gaurd structures and bases.",
+    "keys": {}
+  },
+  "@roblox/globaltype/Filter": {
+    "documentation": "Similar to a chute and a pipe, but only lets certain materials pass through.",
+    "keys": {
+      "Filter": "@roblox/globaltype/Filter.Filter",
+      "Invert": "@roblox/globaltype/Filter.Invert"
+    }
+  },
+  "@roblox/globaltype/Filter.Filter": {
+    "documentation": "The name of the material allowed to pass through."
+  },
+  "@roblox/globaltype/Filter.Invert": {
+    "documentation": "Whether or not to invert the filter."
+  },
+  "@roblox/globaltype/FireWood": {
+    "documentation": "A version of wood that is able to burn longer, allowing it to be an efficient fire burning device.",
+    "keys": {}
+  },
+  "@roblox/globaltype/Fireworks": {
+    "documentation": "Causes an explosion when triggered. You can use a delay wire to make it explode after a few seconds and not immediately.",
+    "keys": {
+      "Triggered": "@roblox/globaltype/Fireworks.Triggered"
+    }
+  },
+  "@roblox/globaltype/Fireworks.Damaged": {},
+  "@roblox/globaltype/Fireworks.Triggered": {
+    "documentation": "Fires when the object is triggered."
+  },
+  "@roblox/globaltype/Flamethrower": {
+    "documentation": "Shoots a stream of flaming gasoline to ignite your foes.",
+    "keys": {
+      "Loop": "@roblox/globaltype/Flamethrower.Loop",
+      "OnClick": "@roblox/globaltype/Flamethrower.OnClick",
+      "Triggered": "@roblox/globaltype/Flamethrower.Triggered"
+    }
+  },
+  "@roblox/globaltype/Flamethrower.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/Flamethrower.OnClick": {
+    "documentation": "Fires when the object is clicked."
+  },
+  "@roblox/globaltype/Flamethrower.Triggered": {
+    "documentation": "Fires when the object is triggered."
+  },
+  "@roblox/globaltype/Flint": {
+    "documentation": "Useful for lighting up flammable materials.\nSimply rub it against a flammable material and it will set it on fire.",
+    "keys": {}
+  },
+  "@roblox/globaltype/FloatDevice": {
+    "documentation": "Defies gravity when powered. Allows for vehicles such as space ships to float.",
+    "keys": {}
+  },
+  "@roblox/globaltype/Food": {
+    "documentation": "A consumable item.\n*Appears* to be meat.\nUpon clicking it, it will heal the user's health depending on the size.",
+    "keys": {
+      "OnClick": "@roblox/globaltype/Food.OnClick"
+    }
+  },
+  "@roblox/globaltype/Food.OnClick": {
+    "documentation": "Fires when the object is clicked."
+  },
+  "@roblox/globaltype/Framewire": {
+    "documentation": "Enter the matrix.",
+    "keys": {}
+  },
+  "@roblox/globaltype/Freezer": {
+    "documentation": "Turns attached water bins into ice when powered.",
+    "keys": {
+      "Loop": "@roblox/globaltype/Freezer.Loop"
+    }
+  },
+  "@roblox/globaltype/Freezer.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/Furnace": {
+    "keys": {
+      "Loop": "@roblox/globaltype/Furnace.Loop"
+    }
+  },
+  "@roblox/globaltype/Furnace.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/Gasoline": {
+    "documentation": "A liquid used for fueling many devices such as rockets and engines.",
+    "keys": {}
+  },
+  "@roblox/globaltype/Gear": {
+    "keys": {}
+  },
+  "@roblox/globaltype/GeigerCounter": {
+    "keys": {}
+  },
+  "@roblox/globaltype/Glass": {
+    "documentation": "Created when sand is burned or set on fire. Can be broken by heavy impacts or by fist.",
+    "keys": {}
+  },
+  "@roblox/globaltype/Gold": {
+    "documentation": "A very valuable and stretchable material.",
+    "keys": {}
+  },
+  "@roblox/globaltype/Goo": {
+    "documentation": "A sticky substance that can stick together to objects when touched.",
+    "keys": {}
+  },
+  "@roblox/globaltype/Grass": {
+    "documentation": "An organic substance found in terra and forest planets. Often green, but can be other colors. Useful for planting seeds for agriculture.",
+    "keys": {}
+  },
+  "@roblox/globaltype/GravityGenerator": {
+    "documentation": "Generates an artificial gravity field when powered on. The gravity field only affects players, not individual parts. The amount of gravity can also be configureed, but the more gravity the higher amount of power needed. Only works in space, not inside planets.",
+    "keys": {
+      "Gravity": "@roblox/globaltype/GravityGenerator.Gravity",
+      "Loop": "@roblox/globaltype/GravityGenerator.Loop"
+    }
+  },
+  "@roblox/globaltype/GravityGenerator.Gravity": {
+    "documentation": "The amount of gravity within the influence of the GravityGenerator, measured in Gs."
+  },
+  "@roblox/globaltype/GravityGenerator.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/Gun": {
+    "documentation": "Fires a harmful bullet when triggered.\nMust be supplied with ammo in order to function.\nFor example, you need an iron bin with 1 or more iron directly attached to it to work.",
+    "keys": {}
+  },
+  "@roblox/globaltype/Gyro": {
+    "documentation": "Stabilizes vehicles and structures by pointing upwards. Useful for mechs or orientating structures to the correct rotation. The gyro can also be configured to seek objects and players.\n\nWhen powered, the gyro will follow its seek commands that can be configured using hammer.\nThe gyro has commands that allow it to find and seek objects and players.\n\nAn example of gyro's seek configuration includes \"Player1 Player2\" which will seek and aim towards the nearest player.\n\nPutting \"Radar\" at the beginning of the seek configuration will make it target parts instead. For example, \"Radar Gold Copper\" will find the nearest Gold or Copper deposit.\n\nPutting \"AllExcept\" will make the seeker target everything except the given list, basically inverting it. For example, \"AllExcept Player1 Player2\" will target \"Player3\" or \"Player\"4 but not \"Player1\".\n\nThe commands \"Min\" and \"Max\" set the minimum or maximum distance the seeker will target. For example, \"Min20 Max500\" will make the seeker only target objects within 500 studs and more than 20 studs away.\n\nTriggerWhenSeeked will trigger all connected parts every second when the Seek configurable is satisfied\n\n\"TrigMin\" and \"TrigMax\" work the same as \"Min\" and \"Max\" but it's for the trigger signal, trigger signal will only be sent if the above property is true.\n\nPutting \"Sun\" as part of the list will make the seeker automatically target the main stellar body in the system.\n\nGyros also have a property called MaxTorque. This allows you to control the max force on the gyro to stabilize it.",
+    "keys": {
+      "Configured": "@roblox/globaltype/Gyro.Configured",
+      "DisableWhenUnpowered": "@roblox/globaltype/Gyro.DisableWhenUnpowered",
+      "Loop": "@roblox/globaltype/Gyro.Loop",
+      "MaxTorque": "@roblox/globaltype/Gyro.MaxTorque",
+      "PointAlong": "@roblox/globaltype/Gyro.PointAlong",
+      "PointAt": "@roblox/globaltype/Gyro.PointAt",
+      "Seek": "@roblox/globaltype/Gyro.Seek",
+      "TriggerWhenSeeked": "@roblox/globaltype/Gyro.TriggerWhenSeeked"
+    }
+  },
+  "@roblox/globaltype/Gyro.Configured": {
+    "documentation": "Fires when the object is configured."
+  },
+  "@roblox/globaltype/Gyro.DisableWhenUnpowered": {
+    "documentation": "Determines whether this gyro should be disabled while it does not have power."
+  },
+  "@roblox/globaltype/Gyro.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/Gyro.MaxTorque": {
+    "documentation": "The maximum force in each axis the gyro can exert."
+  },
+  "@roblox/globaltype/Gyro.PointAlong": {
+    "documentation": "Points the gyro along the specified vector. Pass `nil` or configure the gyro to stop pointing.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Gyro",
+        "name": "self"
+      },
+      {
+        "documentation": "@roblox/globaltype/Gyro.PointAlong/params/1",
+        "name": "direction"
+      },
+      {
+        "documentation": "@roblox/globaltype/Gyro.PointAlong/params/2",
+        "name": "up"
+      }
+    ]
+  },
+  "@roblox/globaltype/Gyro.PointAlong/params/1": {
+    "documentation": "The vector for the gyro to point along."
+  },
+  "@roblox/globaltype/Gyro.PointAlong/params/2": {
+    "documentation": "Optionally specify the upward direction (`up`) of the gyro with a default of `(0, 1, 0)`."
+  },
+  "@roblox/globaltype/Gyro.PointAt": {
+    "documentation": "Points the gyro towards the specified position. Pass `nil` or configure the gyro to stop pointing.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Gyro",
+        "name": "self"
+      },
+      {
+        "documentation": "@roblox/globaltype/Gyro.PointAt/params/1",
+        "name": "position"
+      },
+      {
+        "documentation": "@roblox/globaltype/Gyro.PointAt/params/2",
+        "name": "up"
+      }
+    ]
+  },
+  "@roblox/globaltype/Gyro.PointAt/params/1": {
+    "documentation": "The position for the gyro to look at."
+  },
+  "@roblox/globaltype/Gyro.PointAt/params/2": {
+    "documentation": "Optionally specify the upward direction (`up`) of the gyro with a default of `(0, 1, 0)`."
+  },
+  "@roblox/globaltype/Gyro.Seek": {
+    "documentation": "The seek commands."
+  },
+  "@roblox/globaltype/Gyro.TriggerWhenSeeked": {
+    "documentation": "Determines whether to send out a trigger signal when the gyro detects something to seek as determined by the Seek configurable."
+  },
+  "@roblox/globaltype/HalfSphere": {
+    "documentation": "A half sphere shaped template object.",
+    "keys": {}
+  },
+  "@roblox/globaltype/Handle": {
+    "documentation": "A handle which can be equipped when a player touches it, turning all connected parts into an equipable tool.",
+    "keys": {
+      "Swing": "@roblox/globaltype/Handle.Swing",
+      "ToolName": "@roblox/globaltype/Handle.ToolName",
+      "TriggerMode": "@roblox/globaltype/Handle.TriggerMode"
+    }
+  },
+  "@roblox/globaltype/Handle.Swing": {
+    "documentation": "The type of swinging for this tool. Swing 0: Doesn't swing on click; 1: Swings downward on click; 2: Follows the mouse cursor"
+  },
+  "@roblox/globaltype/Handle.ToolName": {
+    "documentation": "The name of the tool."
+  },
+  "@roblox/globaltype/Handle.TriggerMode": {
+    "documentation": "Determines when this Handle should send trigger signals. TriggerMode 0: Trigger on mouse down; 1: Trigger on mouse up; 2: Trigger on mouse down and mouse up. If TriggerMode is set to anything else, it will trigger when the key TriggerMode is set to is pressed."
+  },
+  "@roblox/globaltype/Hatch": {
+    "documentation": "Acts as a chute when active/gray, but when black or inactive it acts as a normal object.",
+    "keys": {}
+  },
+  "@roblox/globaltype/HeatPipe": {
+    "keys": {}
+  },
+  "@roblox/globaltype/HeatPump": {
+    "keys": {
+      "Loop": "@roblox/globaltype/HeatPump.Loop",
+      "TransferRate": "@roblox/globaltype/HeatPump.TransferRate"
+    }
+  },
+  "@roblox/globaltype/HeatPump.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/HeatPump.TransferRate": {
+    "documentation": "How many kW of heat energy to pump."
+  },
+  "@roblox/globaltype/HeatValve": {
+    "keys": {
+      "Configured": "@roblox/globaltype/HeatValve.Configured",
+      "OnClick": "@roblox/globaltype/HeatValve.OnClick",
+      "SwitchValue": "@roblox/globaltype/HeatValve.SwitchValue"
+    }
+  },
+  "@roblox/globaltype/HeatValve.Configured": {
+    "documentation": "Fires when the object is configured."
+  },
+  "@roblox/globaltype/HeatValve.OnClick": {
+    "documentation": "Fires when the object is clicked."
+  },
+  "@roblox/globaltype/HeatValve.SwitchValue": {
+    "documentation": "Determines whether the switch is active or not."
+  },
+  "@roblox/globaltype/Heater": {
+    "documentation": "Generated heat when powered by electricity. Glows red hot while functioning.\nCan be used as insulation in cold environments. Heat amount is based on size 10 * X * Y * Z / 16",
+    "keys": {}
+  },
+  "@roblox/globaltype/Helium": {
+    "documentation": "A light invisible odorless gas, floats up.",
+    "keys": {}
+  },
+  "@roblox/globaltype/Hologram": {
+    "documentation": "Using our brand new Multi-Dimensional Holographic Projection Technology™ you are able to create a stationary clone with only the ID of the user provided!.",
+    "keys": {
+      "Configured": "@roblox/globaltype/Hologram.Configured",
+      "UserId": "@roblox/globaltype/Hologram.UserId"
+    }
+  },
+  "@roblox/globaltype/Hologram.Configured": {
+    "documentation": "Fires when the object is configured."
+  },
+  "@roblox/globaltype/Hologram.UserId": {
+    "documentation": "The UserId of the player for the Hologram to display."
+  },
+  "@roblox/globaltype/Hydrogen": {
+    "documentation": "A gas commonly found in stars and gas giants.",
+    "keys": {}
+  },
+  "@roblox/globaltype/Hydroponic": {
+    "documentation": "Grows grass and wood from water, turning attached water bins into either wood, sticks or grass. Incredibly useful for space bases or bases in areas devoid of life.",
+    "keys": {
+      "Grow": "@roblox/globaltype/Hydroponic.Grow",
+      "Loop": "@roblox/globaltype/Hydroponic.Loop"
+    }
+  },
+  "@roblox/globaltype/Hydroponic.Grow": {
+    "documentation": "The material to grow from the Hydroponic."
+  },
+  "@roblox/globaltype/Hydroponic.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/HyperDrive": {
+    "documentation": "A device used to travel at faster than light speeds to other regions of the universe. \nSimply input the coordinates to your destination and have a sufficient amount of fuel, and you'll be on your way to your destination.\nTo initiate warping, power the hyperdrive and trigger it. When warping, the hyperdrive will be anchored to prevent any movement.\n\nThe power required for warping will be dependent on the distance travelled, as well as the size of the object being transported.\nThe amount of power required will be displayed in the hyper drive, shown in the red text. \n\nAll of the parts connected to the hyperdrive and every player sitting will be teleported, however any free floating parts or standing up players will be sucked into the vaccum of space, so be careful.\n\nThe red text at the bottom of the hyperdrive indicates how much power is needed to perform the jump.\n\nMake sure the numbers on the hyperdrive is facing up to ensure correct stud alignment.",
+    "keys": {
+      "Configured": "@roblox/globaltype/HyperDrive.Configured",
+      "Coordinates": "@roblox/globaltype/HyperDrive.Coordinates",
+      "GetRequiredPower": "@roblox/globaltype/HyperDrive.GetRequiredPower",
+      "Triggered": "@roblox/globaltype/HyperDrive.Triggered"
+    }
+  },
+  "@roblox/globaltype/HyperDrive.Configured": {
+    "documentation": "Fires when the object is configured."
+  },
+  "@roblox/globaltype/HyperDrive.Coordinates": {
+    "documentation": "The coordinates to warp to."
+  },
+  "@roblox/globaltype/HyperDrive.GetRequiredPower": {
+    "documentation": "Returns the amount of power required for the warp.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/HyperDrive",
+        "name": "self"
+      }
+    ]
+  },
+  "@roblox/globaltype/HyperDrive.Triggered": {
+    "documentation": "Fires when the object is triggered."
+  },
+  "@roblox/globaltype/Ice": {
+    "documentation": "A compact natural resource found in tundra planets and the top of a few mountains. It is a slippery material, and has very low friction which can be useful in some devices. Burning ice results in water.",
+    "keys": {}
+  },
+  "@roblox/globaltype/Igniter": {
+    "documentation": "Sets alight parts within the immediate vicinity when triggered.",
+    "keys": {
+      "Triggered": "@roblox/globaltype/Igniter.Triggered"
+    }
+  },
+  "@roblox/globaltype/Igniter.Triggered": {
+    "documentation": "Fires when the object is triggered."
+  },
+  "@roblox/globaltype/ImpulseCannon": {
+    "documentation": "Blasts a harmless burst of energy which sends anything nearby soaring at a high velocity.",
+    "keys": {
+      "OnClick": "@roblox/globaltype/ImpulseCannon.OnClick",
+      "Triggered": "@roblox/globaltype/ImpulseCannon.Triggered"
+    }
+  },
+  "@roblox/globaltype/ImpulseCannon.OnClick": {
+    "documentation": "Fires when the object is clicked."
+  },
+  "@roblox/globaltype/ImpulseCannon.Triggered": {
+    "documentation": "Fires when the object is triggered."
+  },
+  "@roblox/globaltype/Instrument": {
+    "documentation": "A device used to measure special values such as current speed and temperature.\n\nThese are the types as follows:\nSpeed - Speed / velocity of the instrument\nRotSpeed - Rotational speed of the instrument\nTemperature - Temperature of the local environment\nTime - Current time (relative to the region and scaled to earth time)\nPower - Total amount of power in a wire system, for example attaching it to a powercell with 200 power will display 200 power.\nSize - The dimensions of the part it is attached to.\nPosition - The position of the current instrument.\nTemperatureF - Temperature but in Fahrenheit.",
+    "keys": {
+      "GetReading": "@roblox/globaltype/Instrument.GetReading",
+      "Loop": "@roblox/globaltype/Instrument.Loop",
+      "Type": "@roblox/globaltype/Instrument.Type"
+    }
+  },
+  "@roblox/globaltype/Instrument.GetReading": {
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Instrument",
+        "name": "self"
+      },
+      {
+        "name": "typeId"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/Instrument.GetReading/returns/0"
+    ]
+  },
+  "@roblox/globaltype/Instrument.GetReading/returns/0": {},
+  "@roblox/globaltype/Instrument.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/Instrument.Type": {
+    "documentation": "The type of instrument readout to display on the instrument."
+  },
+  "@roblox/globaltype/Insulation": {
+    "keys": {}
+  },
+  "@roblox/globaltype/IonRocket": {
+    "documentation": "An IonRocket allows space flight. When powered, it will propel force dependent on the Propulsion setting, which you can configure with the hammer tool. \n\t\tThe arrow indicates the direction the ionrocket will propel to when powered.",
+    "keys": {}
+  },
+  "@roblox/globaltype/Iron": {
+    "documentation": "A compact and durable material, commonly found in planets. It is used often in crafting, and is a very important resource to have.",
+    "keys": {}
+  },
+  "@roblox/globaltype/Jade": {
+    "keys": {}
+  },
+  "@roblox/globaltype/Keyboard": {
+    "documentation": "Similar to a button, except is programmable to take more than one key input.\nCan be attached to a vehicle seat or clicked by a player.",
+    "keys": {
+      "SimulateKeyPress": "@roblox/globaltype/Keyboard.SimulateKeyPress",
+      "SimulateTextInput": "@roblox/globaltype/Keyboard.SimulateTextInput",
+      "SimulateUserInput": "@roblox/globaltype/Keyboard.SimulateUserInput",
+      "TextInputted": "@roblox/globaltype/Keyboard.TextInputted"
+    }
+  },
+  "@roblox/globaltype/Keyboard.KeyPressed": {},
+  "@roblox/globaltype/Keyboard.SimulateKeyPress": {
+    "documentation": "Simulates a key press just like you would press a key on the keyboard.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Keyboard",
+        "name": "self"
+      },
+      {
+        "name": "key"
+      },
+      {
+        "name": "player"
+      }
+    ]
+  },
+  "@roblox/globaltype/Keyboard.SimulateTextInput": {
+    "documentation": "Simulates text input just like you would type in the keyboard and enter.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Keyboard",
+        "name": "self"
+      },
+      {
+        "name": "input"
+      },
+      {
+        "name": "player"
+      }
+    ]
+  },
+  "@roblox/globaltype/Keyboard.SimulateUserInput": {
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Keyboard",
+        "name": "self"
+      },
+      {
+        "name": "..."
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/Keyboard.SimulateUserInput/returns/0"
+    ]
+  },
+  "@roblox/globaltype/Keyboard.SimulateUserInput/returns/0": {},
+  "@roblox/globaltype/Keyboard.TextInputted": {
+    "code_sample": "local telescope = GetPart(\"Telescope\")\nlocal keyboard = GetPart(\"Keyboard\")\n\nlocal repr = require(\"repr\")\n\nkeyboard:Connect(\"TextInputted\", function(text)\n  telescope.ViewCoordinates = text .. \", false\"\n  print(repr(telescope:GetCoordinate()))\nend)",
+    "documentation": "An event that fires when a player inputs text and presses <code>Enter</code> (or <code>Return</code>) on the keyboard."
+  },
+  "@roblox/globaltype/Keyboard.UserInput": {},
+  "@roblox/globaltype/Kiln": {
+    "documentation": "Turns attached sand bins into glass.",
+    "keys": {
+      "Loop": "@roblox/globaltype/Kiln.Loop"
+    }
+  },
+  "@roblox/globaltype/Kiln.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/Laser": {
+    "documentation": "Fires a concentraded beam of energy when powered, which can be used to damage and set objects on fire. \n\tHas a Range of 1000 studs.\n\tPrimarily used as a weapon in space combat situations.\n\tWhile it can damage objects effectively, it cannot damage energy shields.",
+    "keys": {
+      "DamageOnlyPlayers": "@roblox/globaltype/Laser.DamageOnlyPlayers",
+      "Loop": "@roblox/globaltype/Laser.Loop"
+    }
+  },
+  "@roblox/globaltype/Laser.DamageOnlyPlayers": {
+    "documentation": "Determines if this laser is only allowed to damage players and not materials."
+  },
+  "@roblox/globaltype/Laser.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/Lava": {
+    "documentation": "A liquid used for fueling many devices such as rockets and engines.",
+    "keys": {}
+  },
+  "@roblox/globaltype/Lead": {
+    "documentation": "An uncommon material used in protection against radiation and weapon manufacturing.",
+    "keys": {}
+  },
+  "@roblox/globaltype/LifeSensor": {
+    "documentation": "Senses and detects organic life up to a distnace of 2000 studs. Used mainly in programming, as is used in alien technology to hunt down organisms such as players.\nHas a special programmable event called 'GetReading()' which returns a table of all organisms, with their positions and names.\nExample:\n{\n\tPlayer1 = Vector3.new(5, 5, 5);\n}",
+    "keys": {
+      "GetPlayers": "@roblox/globaltype/LifeSensor.GetPlayers",
+      "GetReading": "@roblox/globaltype/LifeSensor.GetReading",
+      "ListPlayers": "@roblox/globaltype/LifeSensor.ListPlayers"
+    }
+  },
+  "@roblox/globaltype/LifeSensor.GetPlayers": {
+    "documentation": "Returns a table where the keys are *player* <code>UserId</code>s and the values are *player* CFrames. Only has a 2,000 stud range.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/LifeSensor",
+        "name": "self"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/LifeSensor.GetPlayers/returns/0"
+    ]
+  },
+  "@roblox/globaltype/LifeSensor.GetPlayers/returns/0": {
+    "documentation": "A dictionary of player <code>UserId</code>s to their world CFrames."
+  },
+  "@roblox/globaltype/LifeSensor.GetReading": {
+    "documentation": "Returns a table where the keys are *humanoid* names and the values are *humanoid* positions. Only has a 2,000 stud range.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/LifeSensor",
+        "name": "self"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/LifeSensor.GetReading/returns/0"
+    ]
+  },
+  "@roblox/globaltype/LifeSensor.GetReading/returns/0": {
+    "documentation": "A dictionary of humanoid names to their world positions."
+  },
+  "@roblox/globaltype/LifeSensor.ListPlayers": {
+    "documentation": "Returns an array of player <code>UserId</code>s. Ignores the 2,000 stud range limit.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/LifeSensor",
+        "name": "self"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/LifeSensor.ListPlayers/returns/0"
+    ]
+  },
+  "@roblox/globaltype/LifeSensor.ListPlayers/returns/0": {},
+  "@roblox/globaltype/Light": {
+    "documentation": "Emits light when powered with electricity. Can be colored in different ways, changing the light color",
+    "keys": {
+      "Brightness": "@roblox/globaltype/Light.Brightness",
+      "Configured": "@roblox/globaltype/Light.Configured",
+      "LightRange": "@roblox/globaltype/Light.LightRange",
+      "SetColor": "@roblox/globaltype/Light.SetColor",
+      "Shadows": "@roblox/globaltype/Light.Shadows"
+    }
+  },
+  "@roblox/globaltype/Light.Brightness": {
+    "documentation": "The brightness of the light."
+  },
+  "@roblox/globaltype/Light.Configured": {
+    "documentation": "Fires when the object is configured."
+  },
+  "@roblox/globaltype/Light.LightRange": {
+    "documentation": "The range of the light."
+  },
+  "@roblox/globaltype/Light.SetColor": {
+    "documentation": "Sets the color of the light.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Light",
+        "name": "self"
+      },
+      {
+        "name": "color"
+      }
+    ]
+  },
+  "@roblox/globaltype/Light.Shadows": {
+    "documentation": "Whether or not the light will cast shadows."
+  },
+  "@roblox/globaltype/LightBridge": {
+    "documentation": "Fires a beam of solid light that can be walked on.",
+    "keys": {
+      "BeamColor": "@roblox/globaltype/LightBridge.BeamColor",
+      "Configured": "@roblox/globaltype/LightBridge.Configured",
+      "Loop": "@roblox/globaltype/LightBridge.Loop"
+    }
+  },
+  "@roblox/globaltype/LightBridge.BeamColor": {
+    "documentation": "The color of the bridge's beam."
+  },
+  "@roblox/globaltype/LightBridge.Configured": {
+    "documentation": "Fires when the object is configured."
+  },
+  "@roblox/globaltype/LightBridge.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/LightTube": {
+    "documentation": "Emits light when powered with electricity. Can be colored in different ways, changing the light color",
+    "keys": {
+      "SetColor": "@roblox/globaltype/LightTube.SetColor"
+    }
+  },
+  "@roblox/globaltype/LightTube.SetColor": {
+    "documentation": "Sets the color of the light.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/LightTube",
+        "name": "self"
+      },
+      {
+        "name": "color"
+      }
+    ]
+  },
+  "@roblox/globaltype/Magnesium": {
+    "documentation": "A shiny gray solid that is flammable, randomly ignites when touching stone.",
+    "keys": {}
+  },
+  "@roblox/globaltype/Marble": {
+    "documentation": "A compact and durable material. Primarily used as a building material for decorations.",
+    "keys": {}
+  },
+  "@roblox/globaltype/Melter": {
+    "documentation": "Turns attached ice bins into water when powered.",
+    "keys": {
+      "Loop": "@roblox/globaltype/Melter.Loop"
+    }
+  },
+  "@roblox/globaltype/Melter.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/Microcontroller": {
+    "documentation": "Runs computer programs when triggered and powered.\nWhen triggered by an activator polysilicon, it will run code.\nWhen triggered by a deactivator polysilicon, it will stop running code.\nFor more information on pilot.lua or the game's programming system, visit the programming tutorial or visit the wiki for the game online.\nRequires 5 power per second when running.\n\nMicrocontroller Globals:\nvoid **Beep**(number Pitch) - default pitch 1, max 10 beeps playing concurrently\nobject **GetPort**(number PortID) - returns port configured with 'PortID'\nobject **GetPartFromPort/GetPartsFromPort**(object/number Port, string ClassName) - gets a part connected to port 'Port' with classname 'ClassName'\nvoid **TriggerPort**(object/number Port) - sends a trigger signal from the port 'Port'\n\nGlobals also include all lua globals and all rbx.lua globals,\nexcept for roblox script-related or game-related globals such as workspace, game, stats, time, etc.",
+    "keys": {
+      "Code": "@roblox/globaltype/Microcontroller.Code",
+      "Configured": "@roblox/globaltype/Microcontroller.Configured",
+      "Loop": "@roblox/globaltype/Microcontroller.Loop",
+      "OnClick": "@roblox/globaltype/Microcontroller.OnClick",
+      "Receive": "@roblox/globaltype/Microcontroller.Receive",
+      "Send": "@roblox/globaltype/Microcontroller.Send",
+      "Shutdown": "@roblox/globaltype/Microcontroller.Shutdown",
+      "StartOnSpawn": "@roblox/globaltype/Microcontroller.StartOnSpawn"
+    }
+  },
+  "@roblox/globaltype/Microcontroller.Code": {
+    "documentation": "The code to be executed on this microcontroller."
+  },
+  "@roblox/globaltype/Microcontroller.Configured": {
+    "documentation": "Fires when the object is configured."
+  },
+  "@roblox/globaltype/Microcontroller.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/Microcontroller.OnClick": {
+    "documentation": "Fires when the object is clicked."
+  },
+  "@roblox/globaltype/Microcontroller.Receive": {
+    "code_sample": "-- Microcontroller A\nlocal function receive(sender: Microcontroller, command: string, ...: any)\n    if command == \"Tell me a joke.\" then\n        sender:Send(\"Why did the chicken cross the road?\")\n    elseif command == \"I don't know, why?\" then\n        sender:Send(\"To get to the other side.\")\n    end\nend\n\nwhile true do\n    receive(Microcontroller:Receive())\nend\n\n-- Microcontroller B\nlocal otherMicrocontroller = GetPartFromPort(1, \"Microcontroller\")\n\nlocal function receive(sender: Microcontroller, command: string, ...: any)\n    if command == \"Why did the chicken cross the road?\" then\n        sender:Send(\"I don't know, why?\")\n    elseif command == \"To get to the other side.\" then\n        sender:Send(\"HAHAHA that's SO FUNNY!!!!\")\n        sender:Shutdown() -- kill enemy\n    end\nend\n\ntask.spawn(function()\n    while true do\n        receive(Microcontroller:Receive())\n    end\nend)\n\notherMicrocontroller:Send(\"Tell me a joke.\")",
+    "documentation": "Waits for data to be received.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Microcontroller",
+        "name": "self"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/Microcontroller.Receive/returns/0",
+      "@roblox/globaltype/Microcontroller.Receive/returns/1"
+    ]
+  },
+  "@roblox/globaltype/Microcontroller.Receive/returns/0": {
+    "documentation": "The microcontroller sending the data."
+  },
+  "@roblox/globaltype/Microcontroller.Receive/returns/1": {
+    "documentation": "The parameters sent through by the other microcontroller."
+  },
+  "@roblox/globaltype/Microcontroller.Send": {
+    "code_sample": "-- Microcontroller A\nlocal function receive(sender: Microcontroller, command: string, ...: any)\n    if command == \"Tell me a joke.\" then\n        sender:Send(\"Why did the chicken cross the road?\")\n    elseif command == \"I don't know, why?\" then\n        sender:Send(\"To get to the other side.\")\n    end\nend\n\nwhile true do\n    receive(Microcontroller:Receive())\nend\n\n-- Microcontroller B\nlocal otherMicrocontroller = GetPartFromPort(1, \"Microcontroller\")\n\nlocal function receive(sender: Microcontroller, command: string, ...: any)\n    if command == \"Why did the chicken cross the road?\" then\n        sender:Send(\"I don't know, why?\")\n    elseif command == \"To get to the other side.\" then\n        sender:Send(\"HAHAHA that's SO FUNNY!!!!\")\n        sender:Shutdown() -- kill enemy\n    end\nend\n\ntask.spawn(function()\n    while true do\n        receive(Microcontroller:Receive())\n    end\nend)\n\notherMicrocontroller:Send(\"Tell me a joke.\")",
+    "documentation": "Sends the data you provide to a remote microcontroller. Parts you pass will be based on your microcontroller's context.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Microcontroller",
+        "name": "self"
+      },
+      {
+        "documentation": "@roblox/globaltype/Microcontroller.Send/params/1",
+        "name": "..."
+      }
+    ]
+  },
+  "@roblox/globaltype/Microcontroller.Send/params/1": {
+    "documentation": "The parameters to send to the other microcontroller."
+  },
+  "@roblox/globaltype/Microcontroller.Shutdown": {
+    "documentation": "Kills the microcontroller.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Microcontroller",
+        "name": "self"
+      }
+    ]
+  },
+  "@roblox/globaltype/Microcontroller.StartOnSpawn": {
+    "documentation": "Whether or not to start the Microcontroller when it spawns."
+  },
+  "@roblox/globaltype/Microphone": {
+    "code_sample": "local microphone = GetPart(\"Microphone\")\n\nlocal whitelisted = {\n\t[YOUR_USER_ID_HERE] = true,\n}\n\nlocal commands = {\n\techo = function(userId, arguments)\n\t\tprint(table.concat(arguments, \" \"))\n\tend,\n}\n\nmicrophone:Connect(\"Chatted\", function(userId, message)\n\tif not whitelisted[userId] then return end\n\n\tlocal arguments = message:split(\" \")\n\tlocal command = table.remove(arguments)\n\n\tlocal callback = commands[command]\n\tif callback then\n\t\tcallback(userId, arguments)\n\tend\nend)",
+    "documentation": "Used in programming. Takes user's inputs.",
+    "keys": {
+      "Chatted": "@roblox/globaltype/Microphone.Chatted"
+    }
+  },
+  "@roblox/globaltype/Microphone.Chatted": {
+    "documentation": "Fires when a user speaks in chat. Also registers hidden commands like '/e dance' or '/console'."
+  },
+  "@roblox/globaltype/MiningLaser": {
+    "documentation": "Fires a concentraded beam of energy when powered, which is used to mine objects such as asteroids, mountains and ore deposits.\nThis works similar to an extractor, except it indirectly extracts power from other natural sources. \n\nWhen the laser hits an object, it will extract resources from that object and put it in attached bins.\nVery useful for creating mining vehicles to extract resources.\n\nUnlike the extractor however, this is far more efficient.\nThe MiningLaser outputs 2 resources per second, unlike the extractor which only does 2. This means the laser is 1.5x more efficient.\n\nHowever, the mining laser generates more heat than the extractor. Atleast 2 coolers are recommended per mining laser.",
+    "keys": {}
+  },
+  "@roblox/globaltype/Modem": {
+    "documentation": "A computer networking object that allows you to send, save and get messages cross-region.\nThis is an incredibly useful part to set up an internet of sorts and send data to other computers.\n\nThe modem has 5 programmable functions to it.\nSendMessage(Data, NetworkId defaults to 0) sends a message (specifically through messaging service) carrying data.\nMessageSent is a special event that can be connected to via Connect. Has one argument called Data which is the data received. \nPostRequest saves a string of data to the WoS internet ':PostRequest(Domain, Data)' (modem must be locked)\nGetRequest gets a string of data from the WoS internet ':GetRequest(Domain)'\nRealPostRequest send a POST request to the real www ':(Domain, DataPassed, AsyncBool, FuncToSendResultsTo, OptionalHeaders)'",
+    "keys": {
+      "GetAsync": "@roblox/globaltype/Modem.GetAsync",
+      "GetRequest": "@roblox/globaltype/Modem.GetRequest",
+      "Loop": "@roblox/globaltype/Modem.Loop",
+      "MessageSent": "@roblox/globaltype/Modem.MessageSent",
+      "NetworkID": "@roblox/globaltype/Modem.NetworkID",
+      "PostAsync": "@roblox/globaltype/Modem.PostAsync",
+      "PostRequest": "@roblox/globaltype/Modem.PostRequest",
+      "RealPostRequest": "@roblox/globaltype/Modem.RealPostRequest",
+      "RequestAsync": "@roblox/globaltype/Modem.RequestAsync",
+      "SendLocalMessage": "@roblox/globaltype/Modem.SendLocalMessage",
+      "SendMessage": "@roblox/globaltype/Modem.SendMessage",
+      "UrlEncode": "@roblox/globaltype/Modem.UrlEncode"
+    }
+  },
+  "@roblox/globaltype/Modem.GetAsync": {
+    "learn_more_link": "https://create.roblox.com/docs/reference/engine/classes/HttpService#GetAsync",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Modem",
+        "name": "self"
+      },
+      {
+        "name": "url"
+      },
+      {
+        "name": "nocache"
+      },
+      {
+        "name": "headers"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/Modem.GetAsync/returns/0"
+    ]
+  },
+  "@roblox/globaltype/Modem.GetAsync/returns/0": {},
+  "@roblox/globaltype/Modem.GetRequest": {
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Modem",
+        "name": "self"
+      },
+      {
+        "name": "domain"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/Modem.GetRequest/returns/0"
+    ]
+  },
+  "@roblox/globaltype/Modem.GetRequest/returns/0": {},
+  "@roblox/globaltype/Modem.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/Modem.MessageSent": {
+    "documentation": "Fired when the Modem receives a message from another modem with the same <code>NetworkId</code>."
+  },
+  "@roblox/globaltype/Modem.NetworkID": {
+    "documentation": "The ID of the network this modem should connect to."
+  },
+  "@roblox/globaltype/Modem.PostAsync": {
+    "learn_more_link": "https://create.roblox.com/docs/reference/engine/classes/HttpService#PostAsync",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Modem",
+        "name": "self"
+      },
+      {
+        "name": "url"
+      },
+      {
+        "name": "data"
+      },
+      {
+        "name": "contentType"
+      },
+      {
+        "name": "compress"
+      },
+      {
+        "name": "headers"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/Modem.PostAsync/returns/0"
+    ]
+  },
+  "@roblox/globaltype/Modem.PostAsync/returns/0": {},
+  "@roblox/globaltype/Modem.PostRequest": {
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Modem",
+        "name": "self"
+      },
+      {
+        "name": "domain"
+      },
+      {
+        "name": "data"
+      }
+    ]
+  },
+  "@roblox/globaltype/Modem.RealPostRequest": {
+    "documentation": "@deprecated -- Use `:PostAsync` instead.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Modem",
+        "name": "self"
+      },
+      {
+        "name": "domain"
+      },
+      {
+        "name": "data"
+      },
+      {
+        "name": "asyncBool"
+      },
+      {
+        "name": "transformFunction"
+      },
+      {
+        "name": "optionalHeaders"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/Modem.RealPostRequest/returns/0"
+    ]
+  },
+  "@roblox/globaltype/Modem.RealPostRequest/returns/0": {},
+  "@roblox/globaltype/Modem.RequestAsync": {
+    "learn_more_link": "https://create.roblox.com/docs/reference/engine/classes/HttpService#RequestAsync",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Modem",
+        "name": "self"
+      },
+      {
+        "name": "options"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/Modem.RequestAsync/returns/0"
+    ]
+  },
+  "@roblox/globaltype/Modem.RequestAsync/returns/0": {},
+  "@roblox/globaltype/Modem.SendLocalMessage": {
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Modem",
+        "name": "self"
+      },
+      {
+        "name": "..."
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/Modem.SendLocalMessage/returns/0"
+    ]
+  },
+  "@roblox/globaltype/Modem.SendLocalMessage/returns/0": {},
+  "@roblox/globaltype/Modem.SendMessage": {
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Modem",
+        "name": "self"
+      },
+      {
+        "name": "data"
+      },
+      {
+        "name": "id"
+      }
+    ]
+  },
+  "@roblox/globaltype/Modem.UrlEncode": {
+    "learn_more_link": "https://create.roblox.com/docs/reference/engine/classes/HttpService#UrlEncode",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Modem",
+        "name": "self"
+      },
+      {
+        "name": "input"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/Modem.UrlEncode/returns/0"
+    ]
+  },
+  "@roblox/globaltype/Modem.UrlEncode/returns/0": {},
+  "@roblox/globaltype/Motor": {
+    "documentation": "Spins objects attached to the hinge at the front when powered.",
+    "keys": {
+      "Configured": "@roblox/globaltype/Motor.Configured",
+      "Power": "@roblox/globaltype/Motor.Power",
+      "Ratio": "@roblox/globaltype/Motor.Ratio"
+    }
+  },
+  "@roblox/globaltype/Motor.Configured": {
+    "documentation": "Fires when the object is configured."
+  },
+  "@roblox/globaltype/Motor.Power": {
+    "documentation": "Determines the amount of power used to drive the motor. This affects the torque and power consumption. Negative values are reverse."
+  },
+  "@roblox/globaltype/Motor.Ratio": {
+    "documentation": "Determines the gear ratio applied to the motor in terms of the multiplier on the RPM. A value of 0.1 indicates a 10:1 ratio, where RPM is 1/10th and torque is 10x when compared to the default setting of 1."
+  },
+  "@roblox/globaltype/MustardGas": {
+    "keys": {}
+  },
+  "@roblox/globaltype/Neon": {
+    "documentation": "A building decoration material that glows by itself without requiring power.",
+    "keys": {}
+  },
+  "@roblox/globaltype/Neutronium": {
+    "documentation": "The most durable obtainable material in the game. It is a strange form of matter found from the crusts of neutron stars. Due to the nature of neutron stars, neutronium is the hardest known material as well as the densest known material in the universe.",
+    "keys": {}
+  },
+  "@roblox/globaltype/NitrogenOxide": {
+    "documentation": "A light gas emitted from machines such as extractors and rockets. Inhaling can cause severe lung damage.",
+    "keys": {}
+  },
+  "@roblox/globaltype/NuclearWaste": {
+    "documentation": "A highly radioactive material produced from spent Uranium in a reactor.",
+    "keys": {}
+  },
+  "@roblox/globaltype/Obamium": {
+    "keys": {}
+  },
+  "@roblox/globaltype/Obelisk": {
+    "documentation": "An object designed to attract aliens to the region. Emits an ominous noise when powered.\nMust be anchored and powered in order to function. Must also be open to the sky. Only one obelisk in a region can be powered at a time.\nWhen active, it attracts an Alien every 300 seconds.\n**Use at your own risk.**",
+    "keys": {
+      "Loop": "@roblox/globaltype/Obelisk.Loop"
+    }
+  },
+  "@roblox/globaltype/Obelisk.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/ObjectDetector": {
+    "keys": {
+      "GetLastHitData": "@roblox/globaltype/ObjectDetector.GetLastHitData",
+      "GetLastHitPart": "@roblox/globaltype/ObjectDetector.GetLastHitPart",
+      "MaxDistance": "@roblox/globaltype/ObjectDetector.MaxDistance",
+      "TriggerAtDistance": "@roblox/globaltype/ObjectDetector.TriggerAtDistance"
+    }
+  },
+  "@roblox/globaltype/ObjectDetector.GetLastHitData": {
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/ObjectDetector",
+        "name": "self"
+      }
+    ]
+  },
+  "@roblox/globaltype/ObjectDetector.GetLastHitPart": {
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/ObjectDetector",
+        "name": "self"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/ObjectDetector.GetLastHitPart/returns/0"
+    ]
+  },
+  "@roblox/globaltype/ObjectDetector.GetLastHitPart/returns/0": {},
+  "@roblox/globaltype/ObjectDetector.MaxDistance": {
+    "documentation": "The range that it can detect an object. Must be between 0 and 1000."
+  },
+  "@roblox/globaltype/ObjectDetector.TriggerAtDistance": {
+    "documentation": "The range that it will trigger if it detect an object."
+  },
+  "@roblox/globaltype/Oil": {
+    "documentation": "A liquid used in refineries to produce Gasoline which can be used for fueling engines and rockets and Petroleum which can be used to make plastic.",
+    "keys": {}
+  },
+  "@roblox/globaltype/Perfectium": {
+    "documentation": "The perfect material. Unbreakable, very stretchable, but is impossibly rare. The very sight of it makes you wonder the imperfections of human beings.",
+    "keys": {}
+  },
+  "@roblox/globaltype/Petroleum": {
+    "documentation": "A gas used for creating plastic.",
+    "keys": {}
+  },
+  "@roblox/globaltype/PilotObject": {
+    "documentation": "The object that all Waste of Space objects inherit from.",
+    "keys": {
+      "Anchored": "@roblox/globaltype/PilotObject.Anchored",
+      "AssemblyCenterOfMass": "@roblox/globaltype/PilotObject.AssemblyCenterOfMass",
+      "AssemblyLinearVelocity": "@roblox/globaltype/PilotObject.AssemblyLinearVelocity",
+      "AssemblyMass": "@roblox/globaltype/PilotObject.AssemblyMass",
+      "CFrame": "@roblox/globaltype/PilotObject.CFrame",
+      "CanInstallComponent": "@roblox/globaltype/PilotObject.CanInstallComponent",
+      "CanUninstallComponent": "@roblox/globaltype/PilotObject.CanUninstallComponent",
+      "ClassName": "@roblox/globaltype/PilotObject.ClassName",
+      "Click": "@roblox/globaltype/PilotObject.Click",
+      "Color": "@roblox/globaltype/PilotObject.Color",
+      "CreatedBy": "@roblox/globaltype/PilotObject.CreatedBy",
+      "Destroying": "@roblox/globaltype/PilotObject.Destroying",
+      "Durability": "@roblox/globaltype/PilotObject.Durability",
+      "GUID": "@roblox/globaltype/PilotObject.GUID",
+      "GetColor": "@roblox/globaltype/PilotObject.GetColor",
+      "GetComponent": "@roblox/globaltype/PilotObject.GetComponent",
+      "GetConfigurables": "@roblox/globaltype/PilotObject.GetConfigurables",
+      "GetDurability": "@roblox/globaltype/PilotObject.GetDurability",
+      "GetEvents": "@roblox/globaltype/PilotObject.GetEvents",
+      "GetMethods": "@roblox/globaltype/PilotObject.GetMethods",
+      "GetNameOfOwnerAsync": "@roblox/globaltype/PilotObject.GetNameOfOwnerAsync",
+      "GetOwnerId": "@roblox/globaltype/PilotObject.GetOwnerId",
+      "GetShape": "@roblox/globaltype/PilotObject.GetShape",
+      "GetSize": "@roblox/globaltype/PilotObject.GetSize",
+      "GetTemperature": "@roblox/globaltype/PilotObject.GetTemperature",
+      "HasComponent": "@roblox/globaltype/PilotObject.HasComponent",
+      "HasPermission": "@roblox/globaltype/PilotObject.HasPermission",
+      "Health": "@roblox/globaltype/PilotObject.Health",
+      "Heat": "@roblox/globaltype/PilotObject.Heat",
+      "IsDestroyed": "@roblox/globaltype/PilotObject.IsDestroyed",
+      "IsGrounded": "@roblox/globaltype/PilotObject.IsGrounded",
+      "ListComponents": "@roblox/globaltype/PilotObject.ListComponents",
+      "Mass": "@roblox/globaltype/PilotObject.Mass",
+      "Material": "@roblox/globaltype/PilotObject.Material",
+      "Orientation": "@roblox/globaltype/PilotObject.Orientation",
+      "PartLocked": "@roblox/globaltype/PilotObject.PartLocked",
+      "Position": "@roblox/globaltype/PilotObject.Position",
+      "Size": "@roblox/globaltype/PilotObject.Size",
+      "Temperature": "@roblox/globaltype/PilotObject.Temperature"
+    }
+  },
+  "@roblox/globaltype/PilotObject.Anchored": {
+    "documentation": "Whether or not the object is anchored.",
+    "learn_more_link": "https://create.roblox.com/docs/reference/engine/classes/BasePart#Anchored"
+  },
+  "@roblox/globaltype/PilotObject.AssemblyCenterOfMass": {
+    "documentation": "The center of mass of the object's assembly.",
+    "learn_more_link": "https://create.roblox.com/docs/reference/engine/classes/BasePart#AssemblyCenterOfMass"
+  },
+  "@roblox/globaltype/PilotObject.AssemblyLinearVelocity": {
+    "documentation": "The velocity of the object's assembly.",
+    "learn_more_link": "https://create.roblox.com/docs/reference/engine/classes/BasePart#AssemblyLinearVelocity"
+  },
+  "@roblox/globaltype/PilotObject.AssemblyMass": {
+    "documentation": "The mass of the object's assembly.",
+    "learn_more_link": "https://create.roblox.com/docs/reference/engine/classes/BasePart#AssemblyMass"
+  },
+  "@roblox/globaltype/PilotObject.CFrame": {
+    "documentation": "The current CFrame of the object.",
+    "learn_more_link": "https://create.roblox.com/docs/reference/engine/classes/BasePart#CFrame"
+  },
+  "@roblox/globaltype/PilotObject.CanInstallComponent": {
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/PilotObject",
+        "name": "self"
+      },
+      {
+        "name": "componentName"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/PilotObject.CanInstallComponent/returns/0"
+    ]
+  },
+  "@roblox/globaltype/PilotObject.CanInstallComponent/returns/0": {},
+  "@roblox/globaltype/PilotObject.CanUninstallComponent": {
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/PilotObject",
+        "name": "self"
+      },
+      {
+        "name": "componentName"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/PilotObject.CanUninstallComponent/returns/0"
+    ]
+  },
+  "@roblox/globaltype/PilotObject.CanUninstallComponent/returns/0": {},
+  "@roblox/globaltype/PilotObject.ClassName": {
+    "documentation": "A string representing the type of the object."
+  },
+  "@roblox/globaltype/PilotObject.Click": {
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/PilotObject",
+        "name": "self"
+      },
+      {
+        "name": "..."
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/PilotObject.Click/returns/0"
+    ]
+  },
+  "@roblox/globaltype/PilotObject.Click/returns/0": {},
+  "@roblox/globaltype/PilotObject.Color": {
+    "documentation": "The current color of the object.",
+    "learn_more_link": "https://create.roblox.com/docs/reference/engine/classes/BasePart#Color"
+  },
+  "@roblox/globaltype/PilotObject.CreatedBy": {
+    "documentation": "The user ID of the player who created the object."
+  },
+  "@roblox/globaltype/PilotObject.Destroying": {
+    "documentation": "Fires when the object is destroyed."
+  },
+  "@roblox/globaltype/PilotObject.Durability": {
+    "documentation": "The maximum health of the object"
+  },
+  "@roblox/globaltype/PilotObject.GUID": {
+    "documentation": "The unique GUID of the object"
+  },
+  "@roblox/globaltype/PilotObject.GetColor": {
+    "documentation": "@deprecated -- Use `.Color` instead.\n\nGets the color of the object.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/PilotObject",
+        "name": "self"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/PilotObject.GetColor/returns/0"
+    ]
+  },
+  "@roblox/globaltype/PilotObject.GetColor/returns/0": {
+    "documentation": "The color of the object."
+  },
+  "@roblox/globaltype/PilotObject.GetComponent": {
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/PilotObject",
+        "name": "self"
+      },
+      {
+        "name": "componentName"
+      }
+    ]
+  },
+  "@roblox/globaltype/PilotObject.GetConfigurables": {
+    "documentation": "Returns info about all the configurables that that *kind* of part has. Doesn't tell you what the actual values are, which is why it is public.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/PilotObject",
+        "name": "self"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/PilotObject.GetConfigurables/returns/0"
+    ]
+  },
+  "@roblox/globaltype/PilotObject.GetConfigurables/returns/0": {},
+  "@roblox/globaltype/PilotObject.GetDurability": {
+    "documentation": "@deprecated -- Use `.Durability` instead.\n\nGets the current durability of the object.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/PilotObject",
+        "name": "self"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/PilotObject.GetDurability/returns/0"
+    ]
+  },
+  "@roblox/globaltype/PilotObject.GetDurability/returns/0": {
+    "documentation": "The durability of the part."
+  },
+  "@roblox/globaltype/PilotObject.GetEvents": {
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/PilotObject",
+        "name": "self"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/PilotObject.GetEvents/returns/0"
+    ]
+  },
+  "@roblox/globaltype/PilotObject.GetEvents/returns/0": {
+    "documentation": "An array of event names."
+  },
+  "@roblox/globaltype/PilotObject.GetMethods": {
+    "documentation": "Gets information about the methods of the object.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/PilotObject",
+        "name": "self"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/PilotObject.GetMethods/returns/0"
+    ]
+  },
+  "@roblox/globaltype/PilotObject.GetMethods/returns/0": {},
+  "@roblox/globaltype/PilotObject.GetNameOfOwnerAsync": {
+    "documentation": "@deprecated -- Use `require(\"player\"):GetNameFromUserIdAsync` instead.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/PilotObject",
+        "name": "self"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/PilotObject.GetNameOfOwnerAsync/returns/0"
+    ]
+  },
+  "@roblox/globaltype/PilotObject.GetNameOfOwnerAsync/returns/0": {},
+  "@roblox/globaltype/PilotObject.GetOwnerId": {
+    "documentation": "Returns who locked the part if the part is locked, otherwise returns who created the part.",
+    "learn_more_link": "https://discord.com/channels/616089055532417036/1145165596967850044/1229499376347381780",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/PilotObject",
+        "name": "self"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/PilotObject.GetOwnerId/returns/0"
+    ]
+  },
+  "@roblox/globaltype/PilotObject.GetOwnerId/returns/0": {},
+  "@roblox/globaltype/PilotObject.GetShape": {
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/PilotObject",
+        "name": "self"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/PilotObject.GetShape/returns/0"
+    ]
+  },
+  "@roblox/globaltype/PilotObject.GetShape/returns/0": {},
+  "@roblox/globaltype/PilotObject.GetSize": {
+    "documentation": "@deprecated -- Use `.Size` instead.\n\nGets the size of the object.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/PilotObject",
+        "name": "self"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/PilotObject.GetSize/returns/0"
+    ]
+  },
+  "@roblox/globaltype/PilotObject.GetSize/returns/0": {
+    "documentation": "The size of the part."
+  },
+  "@roblox/globaltype/PilotObject.GetTemperature": {
+    "documentation": "@deprecated -- Use `.Temperature` instead.\n\nGets the temperature of the object.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/PilotObject",
+        "name": "self"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/PilotObject.GetTemperature/returns/0"
+    ]
+  },
+  "@roblox/globaltype/PilotObject.GetTemperature/returns/0": {
+    "documentation": "The temperature of the object."
+  },
+  "@roblox/globaltype/PilotObject.HasComponent": {
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/PilotObject",
+        "name": "self"
+      },
+      {
+        "name": "componentName"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/PilotObject.HasComponent/returns/0"
+    ]
+  },
+  "@roblox/globaltype/PilotObject.HasComponent/returns/0": {},
+  "@roblox/globaltype/PilotObject.HasPermission": {
+    "documentation": "Returns a boolean as to whether or not the microcontroller has permission to do the specified action.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/PilotObject",
+        "name": "self"
+      },
+      {
+        "name": "permission"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/PilotObject.HasPermission/returns/0"
+    ]
+  },
+  "@roblox/globaltype/PilotObject.HasPermission/returns/0": {},
+  "@roblox/globaltype/PilotObject.Health": {
+    "documentation": "The current health of the object"
+  },
+  "@roblox/globaltype/PilotObject.Heat": {
+    "documentation": "The current heat of the object."
+  },
+  "@roblox/globaltype/PilotObject.IsDestroyed": {
+    "documentation": "Returns a boolean as to whether or not the object is destroyed.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/PilotObject",
+        "name": "self"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/PilotObject.IsDestroyed/returns/0"
+    ]
+  },
+  "@roblox/globaltype/PilotObject.IsDestroyed/returns/0": {},
+  "@roblox/globaltype/PilotObject.IsGrounded": {
+    "documentation": "Tells you if the part is grounded, meaning it does it have physics. If it is attached to terrain or an anchor for example, it will be grounded.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/PilotObject",
+        "name": "self"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/PilotObject.IsGrounded/returns/0"
+    ]
+  },
+  "@roblox/globaltype/PilotObject.IsGrounded/returns/0": {},
+  "@roblox/globaltype/PilotObject.ListComponents": {
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/PilotObject",
+        "name": "self"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/PilotObject.ListComponents/returns/0"
+    ]
+  },
+  "@roblox/globaltype/PilotObject.ListComponents/returns/0": {},
+  "@roblox/globaltype/PilotObject.Mass": {
+    "documentation": "The current mass of the individual object.",
+    "learn_more_link": "https://create.roblox.com/docs/reference/engine/classes/BasePart#Mass"
+  },
+  "@roblox/globaltype/PilotObject.Material": {
+    "documentation": "The material of the object.",
+    "learn_more_link": "https://create.roblox.com/docs/reference/engine/classes/BasePart#Material"
+  },
+  "@roblox/globaltype/PilotObject.Orientation": {
+    "documentation": "The current orientation of the object.",
+    "learn_more_link": "https://create.roblox.com/docs/reference/engine/classes/BasePart#Orientation"
+  },
+  "@roblox/globaltype/PilotObject.PartLocked": {
+    "documentation": "The user ID of the player who locked the object."
+  },
+  "@roblox/globaltype/PilotObject.Position": {
+    "documentation": "The current position of the object.",
+    "learn_more_link": "https://create.roblox.com/docs/reference/engine/classes/BasePart#Position"
+  },
+  "@roblox/globaltype/PilotObject.Size": {
+    "documentation": "The current size of the object.",
+    "learn_more_link": "https://create.roblox.com/docs/reference/engine/classes/BasePart#Size"
+  },
+  "@roblox/globaltype/PilotObject.Temperature": {
+    "documentation": "The current heat/temperature of the object."
+  },
+  "@roblox/globaltype/Pipe": {
+    "documentation": "Is able to transfer liquids and gases between containers and other objects when connected by pipes.",
+    "keys": {}
+  },
+  "@roblox/globaltype/Piston": {
+    "keys": {
+      "Configured": "@roblox/globaltype/Piston.Configured",
+      "Position1": "@roblox/globaltype/Piston.Position1",
+      "Position2": "@roblox/globaltype/Piston.Position2",
+      "SetPosition": "@roblox/globaltype/Piston.SetPosition",
+      "Speed": "@roblox/globaltype/Piston.Speed"
+    }
+  },
+  "@roblox/globaltype/Piston.Configured": {
+    "documentation": "Fires when the object is configured."
+  },
+  "@roblox/globaltype/Piston.Position1": {
+    "documentation": "Determines the position of the first state of the piston."
+  },
+  "@roblox/globaltype/Piston.Position2": {
+    "documentation": "Determines the position of the second state of the piston."
+  },
+  "@roblox/globaltype/Piston.SetPosition": {
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Piston",
+        "name": "self"
+      },
+      {
+        "name": "..."
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/Piston.SetPosition/returns/0"
+    ]
+  },
+  "@roblox/globaltype/Piston.SetPosition/returns/0": {},
+  "@roblox/globaltype/Piston.Speed": {
+    "documentation": "Determines the speed of the piston."
+  },
+  "@roblox/globaltype/Plasma": {
+    "documentation": "A gas found abundant in stars, and can be harvested from them. Used primarily for weapons, as well as electrical components.",
+    "keys": {}
+  },
+  "@roblox/globaltype/PlasmaCannon": {
+    "documentation": "Fires an orb of unstable plasma out of the barrel exploding on impact.\nNeeds to be fueled with 500 power and 50 helium or 1 plasma to fire.",
+    "keys": {
+      "OnClick": "@roblox/globaltype/PlasmaCannon.OnClick",
+      "Triggered": "@roblox/globaltype/PlasmaCannon.Triggered"
+    }
+  },
+  "@roblox/globaltype/PlasmaCannon.OnClick": {
+    "documentation": "Fires when the object is clicked."
+  },
+  "@roblox/globaltype/PlasmaCannon.Triggered": {
+    "documentation": "Fires when the object is triggered."
+  },
+  "@roblox/globaltype/Plastic": {
+    "documentation": "A cheap material made from petroleum and Coal through polymerisation inside assemblers.",
+    "keys": {
+      "Loop": "@roblox/globaltype/Plastic.Loop"
+    }
+  },
+  "@roblox/globaltype/Plastic.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/Plutonium": {
+    "documentation": "A highly radioactive compound used in manufacturing nuclear explosives.",
+    "keys": {}
+  },
+  "@roblox/globaltype/PlutoniumCore": {
+    "documentation": "A volatile core close to going supercritical used in recipes for Nuclear explosives.",
+    "keys": {}
+  },
+  "@roblox/globaltype/Polysilicon": {
+    "documentation": "A special electronic material used to send special signals to certain objects.\n\nHas a special configuration called Frequency which dictates how many times the polysilicon will repeat a trigger.\nFor example, if a polysilicon was attached to a pulley, having a frequency of 5 and triggered, the pulley will be activated 5 times.",
+    "keys": {
+      "Configured": "@roblox/globaltype/Polysilicon.Configured",
+      "Frequency": "@roblox/globaltype/Polysilicon.Frequency",
+      "PolysiliconMode": "@roblox/globaltype/Polysilicon.PolysiliconMode"
+    }
+  },
+  "@roblox/globaltype/Polysilicon.Configured": {
+    "documentation": "Fires when the object is configured."
+  },
+  "@roblox/globaltype/Polysilicon.Frequency": {
+    "documentation": "The amount of times to activate the Polysilicon from a single trigger."
+  },
+  "@roblox/globaltype/Polysilicon.PolysiliconMode": {
+    "documentation": "The mode of the Polysilicon. Each mode results in different behaviors for objects."
+  },
+  "@roblox/globaltype/Port": {
+    "documentation": "An object used primarily in programming. Allows a microcontroller and computers to interact with their surroundings.",
+    "keys": {
+      "PortID": "@roblox/globaltype/Port.PortID",
+      "Triggered": "@roblox/globaltype/Port.Triggered"
+    }
+  },
+  "@roblox/globaltype/Port.PortID": {
+    "documentation": "The ID of this port used to utilize this port by connected microcontrollers."
+  },
+  "@roblox/globaltype/Port.Triggered": {
+    "documentation": "Fires when the object is triggered."
+  },
+  "@roblox/globaltype/PowerCell": {
+    "documentation": "Stores electricity, and is used to power many devices using wires or by directly attaching it.\nHas a limit of 125000.",
+    "keys": {}
+  },
+  "@roblox/globaltype/Primer": {
+    "keys": {}
+  },
+  "@roblox/globaltype/Propeller": {
+    "documentation": "Propellers propel forward when spun.\nForward direction indicated by white spot.\nDoes not work in space or non atmospheric planets.",
+    "keys": {
+      "Loop": "@roblox/globaltype/Propeller.Loop"
+    }
+  },
+  "@roblox/globaltype/Propeller.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/Prosthetic": {
+    "documentation": "An artificial part that can be attached to players in exchange for a limb.\nThe limb configuration can be configureed to be the limb you want to have for a prosthetic, for example configuring it to be \"Right Leg\" will have the prosthetic attach itself to your character.\nSimply touch the prosthetic, and it will automatically be attached to your body. This process is extremely unhealthy, however, and may result in short-term complications.\n\nParts can be attached to the prosthetic, allowing many uses for the prosthetic limb.\n\nProsthetic limbs are also electrically conductable, acting as a wire.\n\nHeavily damages the character once attached.\nProsthetics can't have more than 50 parts attached to them.\n \t",
+    "keys": {
+      "Configured": "@roblox/globaltype/Prosthetic.Configured",
+      "Limb": "@roblox/globaltype/Prosthetic.Limb"
+    }
+  },
+  "@roblox/globaltype/Prosthetic.Configured": {
+    "documentation": "Fires when the object is configured."
+  },
+  "@roblox/globaltype/Prosthetic.Limb": {
+    "documentation": "The name of the limb that this Prosthetic is for."
+  },
+  "@roblox/globaltype/ProximityButton": {
+    "keys": {
+      "Configured": "@roblox/globaltype/ProximityButton.Configured",
+      "GamepadKeyCode": "@roblox/globaltype/ProximityButton.GamepadKeyCode",
+      "HoldDuration": "@roblox/globaltype/ProximityButton.HoldDuration",
+      "KeyboardKeyCode": "@roblox/globaltype/ProximityButton.KeyboardKeyCode",
+      "MaxActivationDistance": "@roblox/globaltype/ProximityButton.MaxActivationDistance",
+      "ObjectText": "@roblox/globaltype/ProximityButton.ObjectText",
+      "RequiresLineOfSight": "@roblox/globaltype/ProximityButton.RequiresLineOfSight"
+    }
+  },
+  "@roblox/globaltype/ProximityButton.Configured": {
+    "documentation": "Fires when the object is configured."
+  },
+  "@roblox/globaltype/ProximityButton.GamepadKeyCode": {
+    "documentation": "The name of the key that will trigger the proximity prompt on a gamepad."
+  },
+  "@roblox/globaltype/ProximityButton.HoldDuration": {
+    "documentation": "The length of time that the proximity prompt has to be held down for."
+  },
+  "@roblox/globaltype/ProximityButton.KeyboardKeyCode": {
+    "documentation": "The name of the key that will trigger the proximity prompt on a keyboard."
+  },
+  "@roblox/globaltype/ProximityButton.MaxActivationDistance": {
+    "documentation": "The range of the prompt, from 0 - 50."
+  },
+  "@roblox/globaltype/ProximityButton.ObjectText": {
+    "documentation": "The text of the proximity prompt."
+  },
+  "@roblox/globaltype/ProximityButton.PromptButtonHoldBegan": {},
+  "@roblox/globaltype/ProximityButton.PromptButtonHoldEnded": {},
+  "@roblox/globaltype/ProximityButton.PromptTriggerEnded": {},
+  "@roblox/globaltype/ProximityButton.PromptTriggered": {},
+  "@roblox/globaltype/ProximityButton.RequiresLineOfSight": {
+    "documentation": "Whether a line of sight to the center of the part is required for the prompt to become visible."
+  },
+  "@roblox/globaltype/Pulverizer": {
+    "documentation": "Turns attached stone bins into sand. Once powered, the pulverizer will pulverize any stone bins attached into sand.",
+    "keys": {}
+  },
+  "@roblox/globaltype/Pump": {
+    "documentation": "Pumps liquid from the environment into attached containers. For example, a pump located in the ocean will pump water when powered.",
+    "keys": {
+      "Configured": "@roblox/globaltype/Pump.Configured",
+      "LiquidToPump": "@roblox/globaltype/Pump.LiquidToPump",
+      "Loop": "@roblox/globaltype/Pump.Loop"
+    }
+  },
+  "@roblox/globaltype/Pump.Configured": {
+    "documentation": "Fires when the object is configured."
+  },
+  "@roblox/globaltype/Pump.LiquidToPump": {
+    "documentation": "The name of the liquid to extract using the pump."
+  },
+  "@roblox/globaltype/Pump.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/Quartz": {
+    "documentation": "A translucent and malleable crystal useful for making durable windows.",
+    "keys": {}
+  },
+  "@roblox/globaltype/RTG": {
+    "documentation": "Creates electricity from decaying radioactive elements.",
+    "keys": {}
+  },
+  "@roblox/globaltype/Radar": {
+    "documentation": "An instrument that shows a 2D top-down representation of Earth.",
+    "keys": {
+      "Loop": "@roblox/globaltype/Radar.Loop"
+    }
+  },
+  "@roblox/globaltype/Radar.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/Rail": {
+    "documentation": "Slides and moves objects along its surface when powered and triggered. Useful for creating retractable pistons and actuators, for turrets or other retractable devices.\n\t\t\nRails will only move objects connected on the relative top surface of the rail.\n\t\t\nThe rail can only be activated through the use of polysilicons.\nMode 0 or activating polysilicons will set the rail to position1.\nMode 1 or deactivating polysilicons will set the rail to position2.\nMode 2 or flip flop polysilicons will act like a switch, setting to position2 if position1 and vice versa.\n\t\t\nHas 2 configurations, position1 and position2.\n\t\t\nBoth configurations should be between 0 and 100. These are percents of where the attached objects should slide to.\nFor example, if a rail was 50 studs long and position2 was 50 or 50%, the attached objects will slide to the middle or at 25 studs.\n\t\t\nDue to roblox physics, rails may act weirdly. To prevent this from happening, you should always place your rails first before anything else. It is recommended to attach objects on the rail after the rail is safely placed down.\n",
+    "keys": {
+      "Position1": "@roblox/globaltype/Rail.Position1",
+      "Position2": "@roblox/globaltype/Rail.Position2",
+      "SetPosition": "@roblox/globaltype/Rail.SetPosition",
+      "TweenTime": "@roblox/globaltype/Rail.TweenTime"
+    }
+  },
+  "@roblox/globaltype/Rail.Position1": {
+    "documentation": "Determines the position of the first state of the rail."
+  },
+  "@roblox/globaltype/Rail.Position2": {
+    "documentation": "Determines the position of the second state of the rail."
+  },
+  "@roblox/globaltype/Rail.SetPosition": {
+    "documentation": "Sets the position of the rail.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Rail",
+        "name": "self"
+      },
+      {
+        "name": "depth"
+      }
+    ]
+  },
+  "@roblox/globaltype/Rail.TweenTime": {
+    "documentation": "Determines the time it takes for the rail to change positions."
+  },
+  "@roblox/globaltype/Railgun": {
+    "documentation": "Fires a piercing rail at high speeds. A long range weapon. Requires rails and electricity for ammo. Damage increases for every 10 studs of length.pierce if the hit part is destroyed. Must be at least have a width and height of 6 and at least a length of 30 to function.\n\t\nWhile Railgun is similar to Artillery, the Railgun is nearly instant while Artillery is a projectile weapon.\n\nRequires to charge for one minute before it can fire. While charging and when charged, it creates large amount of heat. Charging status resets when this part is damaged.\n\nWhen it is finished charging, it will stop creating a sound. At that point, it must be triggered and supplied by a rail bin in order to fire.",
+    "keys": {
+      "Loop": "@roblox/globaltype/Railgun.Loop",
+      "Triggered": "@roblox/globaltype/Railgun.Triggered"
+    }
+  },
+  "@roblox/globaltype/Railgun.Damaged": {},
+  "@roblox/globaltype/Railgun.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/Railgun.Triggered": {
+    "documentation": "Fires when the object is triggered."
+  },
+  "@roblox/globaltype/Reactor": {
+    "documentation": "Generates steam using water and heat from radiation.\nUp to 4 pieces of uranium can be inserted into the reactor as fuel.\nIf the temperature is above 400, it will begin to turn water into steam (rate dependent on temperature).\nIf the temperature exceeds 1200 F, a meltdown will occur.\nThe Reactor fuel status can be acquired through the :GetFuel() method with a microcontroller.\nPolysilicon is used to control a reactor, and fuel must be ejected manually:\n\nActivation lowers the control rods, decreasing reaction rate.\nDeactivation raises the control rods, allowing fuel to react.\nFlipFlop will eject fuel or waste from the fuel rod with the least fuel.",
+    "keys": {
+      "Alarm": "@roblox/globaltype/Reactor.Alarm",
+      "GetEfficiency": "@roblox/globaltype/Reactor.GetEfficiency",
+      "GetFuel": "@roblox/globaltype/Reactor.GetFuel",
+      "GetTemp": "@roblox/globaltype/Reactor.GetTemp",
+      "Loop": "@roblox/globaltype/Reactor.Loop"
+    }
+  },
+  "@roblox/globaltype/Reactor.Alarm": {
+    "documentation": "Determines whether the reactor alarm system is enabled for when the reactor is near meltdown temperature."
+  },
+  "@roblox/globaltype/Reactor.GetEfficiency": {
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Reactor",
+        "name": "self"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/Reactor.GetEfficiency/returns/0"
+    ]
+  },
+  "@roblox/globaltype/Reactor.GetEfficiency/returns/0": {},
+  "@roblox/globaltype/Reactor.GetFuel": {
+    "documentation": "Returns an array with four numeric values each representative of their fuel rod. The order is strict and goes from the first to the fourth fuel rod.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Reactor",
+        "name": "self"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/Reactor.GetFuel/returns/0"
+    ]
+  },
+  "@roblox/globaltype/Reactor.GetFuel/returns/0": {},
+  "@roblox/globaltype/Reactor.GetTemp": {
+    "documentation": "Returns a numeric value representing the current temperature of the reactor in degrees fahrenheit.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Reactor",
+        "name": "self"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/Reactor.GetTemp/returns/0"
+    ]
+  },
+  "@roblox/globaltype/Reactor.GetTemp/returns/0": {},
+  "@roblox/globaltype/Reactor.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/Refinery": {
+    "documentation": "Turns oil into Petroleum and Gasoline.",
+    "keys": {
+      "Loop": "@roblox/globaltype/Refinery.Loop"
+    }
+  },
+  "@roblox/globaltype/Refinery.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/RegionCloaker": {
+    "documentation": "Hides a certain region from players, making the coordinates not appear on their screen. \n\tRegion can only be un/cloaked every 25 seconds. So if you unpower the RegionCloaker(uncloaks), you must wait 25 seconds before powering it again to ensure the region gets cloaked.",
+    "keys": {}
+  },
+  "@roblox/globaltype/ReinforcedGlass": {
+    "documentation": "A stronger version of glass, however is less malleable.",
+    "keys": {}
+  },
+  "@roblox/globaltype/RemoteControl": {
+    "documentation": "Similar to an antenna, but sends trigger signals forward wirelessly when triggered.",
+    "keys": {
+      "OnClick": "@roblox/globaltype/RemoteControl.OnClick",
+      "RemoteControlRange": "@roblox/globaltype/RemoteControl.RemoteControlRange",
+      "Triggered": "@roblox/globaltype/RemoteControl.Triggered"
+    }
+  },
+  "@roblox/globaltype/RemoteControl.OnClick": {
+    "documentation": "Fires when the object is clicked."
+  },
+  "@roblox/globaltype/RemoteControl.RemoteControlRange": {
+    "documentation": "The range in studs at which signals will be transmitted."
+  },
+  "@roblox/globaltype/RemoteControl.Triggered": {
+    "documentation": "Fires when the object is triggered."
+  },
+  "@roblox/globaltype/Rocket": {
+    "documentation": "A propulsion device that consumes gasoline.",
+    "keys": {}
+  },
+  "@roblox/globaltype/Rotor": {
+    "documentation": "Provides vertical height when spun, and only works in oxygen planets.\nThe spin speed determines the height, and the tilt of the rotor determines the forward propulsion of the rotor.",
+    "keys": {
+      "Loop": "@roblox/globaltype/Rotor.Loop"
+    }
+  },
+  "@roblox/globaltype/Rotor.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/RoundWedge": {
+    "documentation": "A block rounded on one edge, or 1/4 of a cylinder.",
+    "keys": {}
+  },
+  "@roblox/globaltype/RoundWedge2": {
+    "documentation": "A block rounded inwards on one edge.",
+    "keys": {}
+  },
+  "@roblox/globaltype/Router": {
+    "keys": {
+      "RouterID": "@roblox/globaltype/Router.RouterID"
+    }
+  },
+  "@roblox/globaltype/Router.RouterID": {
+    "documentation": "The ID of this router, to transmit to others with the same ID."
+  },
+  "@roblox/globaltype/Rubber": {
+    "documentation": "A textile resource used in manufacturing many industrial objects.",
+    "keys": {}
+  },
+  "@roblox/globaltype/Ruby": {
+    "keys": {}
+  },
+  "@roblox/globaltype/RustedMetal": {
+    "documentation": "A weathered piece of metal.",
+    "keys": {}
+  },
+  "@roblox/globaltype/Sail": {
+    "documentation": "Utilizes the wind to move forward.",
+    "keys": {
+      "Loop": "@roblox/globaltype/Sail.Loop",
+      "OnClick": "@roblox/globaltype/Sail.OnClick",
+      "Triggered": "@roblox/globaltype/Sail.Triggered"
+    }
+  },
+  "@roblox/globaltype/Sail.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/Sail.OnClick": {
+    "documentation": "Fires when the object is clicked."
+  },
+  "@roblox/globaltype/Sail.Triggered": {
+    "documentation": "Fires when the object is triggered."
+  },
+  "@roblox/globaltype/Sand": {
+    "documentation": "An abundant resource that can be found in the shores of terra and forest planets, the sea floors of ocean planets and in the dunes of desert planets. When burnt, the sand becomes glass.",
+    "keys": {}
+  },
+  "@roblox/globaltype/Scanner": {
+    "keys": {
+      "CalculateCost": "@roblox/globaltype/Scanner.CalculateCost",
+      "GetDistance": "@roblox/globaltype/Scanner.GetDistance",
+      "GetPartsInRange": "@roblox/globaltype/Scanner.GetPartsInRange",
+      "Locate": "@roblox/globaltype/Scanner.Locate",
+      "Range": "@roblox/globaltype/Scanner.Range"
+    }
+  },
+  "@roblox/globaltype/Scanner.CalculateCost": {
+    "documentation": "Calculates the cost of performing a scan with the given range.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Scanner",
+        "name": "self"
+      },
+      {
+        "name": "range"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/Scanner.CalculateCost/returns/0"
+    ]
+  },
+  "@roblox/globaltype/Scanner.CalculateCost/returns/0": {},
+  "@roblox/globaltype/Scanner.GetDistance": {
+    "documentation": "Gets the approximate distance to the part. Accuracy falls off exponentially.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Scanner",
+        "name": "self"
+      },
+      {
+        "name": "part"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/Scanner.GetDistance/returns/0"
+    ]
+  },
+  "@roblox/globaltype/Scanner.GetDistance/returns/0": {},
+  "@roblox/globaltype/Scanner.GetPartsInRange": {
+    "documentation": "Does a (power hungry) query for all parts in the configured (or specified) range up to 1024 studs. Can optionally filter for a class name, but many use cases will prefer to store part objects in a set.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Scanner",
+        "name": "self"
+      },
+      {
+        "name": "range"
+      },
+      {
+        "name": "className"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/Scanner.GetPartsInRange/returns/0"
+    ]
+  },
+  "@roblox/globaltype/Scanner.GetPartsInRange/returns/0": {},
+  "@roblox/globaltype/Scanner.Locate": {
+    "documentation": "Uses GPS to locate a part (uses :GetDistance() internally). The scanners you provide should be on different axes and stuff. You need at least 3 to correctly identify a position.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Scanner",
+        "name": "self"
+      },
+      {
+        "name": "part"
+      },
+      {
+        "name": "scanners"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/Scanner.Locate/returns/0"
+    ]
+  },
+  "@roblox/globaltype/Scanner.Locate/returns/0": {},
+  "@roblox/globaltype/Scanner.Range": {
+    "documentation": "The default range to scan for parts within."
+  },
+  "@roblox/globaltype/Scrapper": {
+    "documentation": "Scraps solid items provided through a dispenser into their crafting components when powered. It also destroys unanchored single parts when touched.",
+    "keys": {
+      "Loop": "@roblox/globaltype/Scrapper.Loop"
+    }
+  },
+  "@roblox/globaltype/Scrapper.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/Screen": {
+    "documentation": "A programmable object capable of showing text, buttons and images on an LED display. Very useful for creating custom programmable interfaces.",
+    "keys": {
+      "ClearElements": "@roblox/globaltype/Screen.ClearElements",
+      "Configured": "@roblox/globaltype/Screen.Configured",
+      "CreateElement": "@roblox/globaltype/Screen.CreateElement",
+      "GetCanvas": "@roblox/globaltype/Screen.GetCanvas",
+      "GetDimensions": "@roblox/globaltype/Screen.GetDimensions",
+      "VideoID": "@roblox/globaltype/Screen.VideoID"
+    }
+  },
+  "@roblox/globaltype/Screen.ClearElements": {
+    "documentation": "Clears all objects that are descendants of the screen.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Screen",
+        "name": "self"
+      }
+    ]
+  },
+  "@roblox/globaltype/Screen.Configured": {
+    "documentation": "Fires when the object is configured."
+  },
+  "@roblox/globaltype/Screen.CreateElement": {
+    "documentation": "Creates an element of the specified class name with the specified properties.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Screen",
+        "name": "self"
+      }
+    ]
+  },
+  "@roblox/globaltype/Screen.GetCanvas": {
+    "documentation": "Returns the parent container of all the screen's content.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Screen",
+        "name": "self"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/Screen.GetCanvas/returns/0"
+    ]
+  },
+  "@roblox/globaltype/Screen.GetCanvas/returns/0": {},
+  "@roblox/globaltype/Screen.GetDimensions": {
+    "documentation": "Gets the size of the screen in pixels in the form of a <code>Vector2</code>",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Screen",
+        "name": "self"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/Screen.GetDimensions/returns/0"
+    ]
+  },
+  "@roblox/globaltype/Screen.GetDimensions/returns/0": {
+    "documentation": "The size of the screen in pixels."
+  },
+  "@roblox/globaltype/Screen.VideoID": {
+    "documentation": "The ID of the camera feed being to be viewed, or 0 for none."
+  },
+  "@roblox/globaltype/Seat": {
+    "keys": {}
+  },
+  "@roblox/globaltype/Servo": {
+    "documentation": "Spins objects attached to the hinge at the front when powered, to set angles.\n\tPolysilicon can be used to control its angle.\n\tActivate will increment the goal angle by the configured angle step (clockwise looking at its face)\n\tDeactivate will decrement the goal angle (counter-clockwise)\n\tFlipFlop will reset the angle to 0\n\tMicrocontrollers can also set a servo's angle with :SetAngle(Goal)",
+    "keys": {
+      "AngleStep": "@roblox/globaltype/Servo.AngleStep",
+      "Configured": "@roblox/globaltype/Servo.Configured",
+      "Responsiveness": "@roblox/globaltype/Servo.Responsiveness",
+      "ServoSpeed": "@roblox/globaltype/Servo.ServoSpeed",
+      "SetAngle": "@roblox/globaltype/Servo.SetAngle"
+    }
+  },
+  "@roblox/globaltype/Servo.AngleStep": {
+    "documentation": "Determines the change in angle when a pulse is received by Polysilicon."
+  },
+  "@roblox/globaltype/Servo.Configured": {
+    "documentation": "Fires when the object is configured."
+  },
+  "@roblox/globaltype/Servo.Responsiveness": {
+    "documentation": "Determines how fast the servo attempts to correct its angle."
+  },
+  "@roblox/globaltype/Servo.ServoSpeed": {
+    "documentation": "Determines the speed at which the servo is driven."
+  },
+  "@roblox/globaltype/Servo.SetAngle": {
+    "documentation": "Sets the angle of a servo just as if you would be configuring it.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Servo",
+        "name": "self"
+      },
+      {
+        "name": "angle"
+      }
+    ]
+  },
+  "@roblox/globaltype/Sign": {
+    "documentation": "Displays text or images. To display an image, configure it to id:imageid ",
+    "keys": {
+      "Configured": "@roblox/globaltype/Sign.Configured",
+      "SignText": "@roblox/globaltype/Sign.SignText",
+      "TextColor": "@roblox/globaltype/Sign.TextColor",
+      "TextFont": "@roblox/globaltype/Sign.TextFont"
+    }
+  },
+  "@roblox/globaltype/Sign.Configured": {
+    "documentation": "Fires when the object is configured."
+  },
+  "@roblox/globaltype/Sign.SignText": {
+    "documentation": "The text to display on the front of the sign. Rich text is allowed."
+  },
+  "@roblox/globaltype/Sign.TextColor": {
+    "documentation": "The color of the text on the sign."
+  },
+  "@roblox/globaltype/Sign.TextFont": {
+    "documentation": "The font of the text on the sign."
+  },
+  "@roblox/globaltype/Silicon": {
+    "documentation": "A metalloid that is very useful for electronics. Can commonly be found in cliffs and rocks",
+    "keys": {}
+  },
+  "@roblox/globaltype/SmoothGlass": {
+    "keys": {}
+  },
+  "@roblox/globaltype/SmoothReinforcedGlass": {
+    "keys": {}
+  },
+  "@roblox/globaltype/Snow": {
+    "documentation": "An abundant resource that can be found in terra biomes and tundra planets. When burnt, the snow turns into water.",
+    "keys": {}
+  },
+  "@roblox/globaltype/SolarPanel": {
+    "documentation": "Generates electricity using solar energy from a local star. \nThe closer it is to a star, the more energy it generates. \nThe type of star also affects its energy generation, as well as the size of the solar panel. \n\nIf the solar panel is blocked by a part, it will not generate any energy. Glass however will work.",
+    "keys": {
+      "Loop": "@roblox/globaltype/SolarPanel.Loop"
+    }
+  },
+  "@roblox/globaltype/SolarPanel.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/SolarScoop": {
+    "documentation": "Extracts materials from a star when powered and pointed at a star.\nDepending on the class of the star, it will extract more materials.\n\nGenerates around 240 degrees of heat, meaning you will need atleast 12 coolers to cool it down.\n\nRed stars generate 25 helium, 5 plasma and 10 hydrogen per second.\nOrange stars generate 30 helium, 5 plasma and and 15 hydrogen per second.\nYellow stars generate 35 helium, 5 plasma and and 20 hydrogen per second.\nLight blue stars generate 40 helium, 25 hydrogen, 10 plasma and and 10 iron per second.\nNeutron stars generate 60 helium, 45 hydrogen, 15 plasma and and 20 iron per second. It also generates 1-2 neutronium every 2 minutes.\n\nIt is recommended to use a Filter to seperate the materials extracted by a solar scoop.",
+    "keys": {
+      "Loop": "@roblox/globaltype/SolarScoop.Loop"
+    }
+  },
+  "@roblox/globaltype/SolarScoop.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/Sorter": {
+    "keys": {
+      "Loop": "@roblox/globaltype/Sorter.Loop",
+      "Rate": "@roblox/globaltype/Sorter.Rate",
+      "Resource": "@roblox/globaltype/Sorter.Resource"
+    }
+  },
+  "@roblox/globaltype/Sorter.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/Sorter.Rate": {
+    "documentation": "How much of the resource to push per second. May be inf (or math.huge in a Microcontroller)."
+  },
+  "@roblox/globaltype/Sorter.Resource": {
+    "documentation": "The kind of resource to push. May be a special or generic type like Gas, Solid, etc."
+  },
+  "@roblox/globaltype/SoundMuffler": {
+    "documentation": "A SoundMuffler will silences the sounds of machinery around it.",
+    "keys": {}
+  },
+  "@roblox/globaltype/SpawnPoint": {
+    "documentation": "Acts as a spawn location for the player who locked it.",
+    "keys": {}
+  },
+  "@roblox/globaltype/Speaker": {
+    "documentation": "Plays audio of length up to 5 seconds, unless it is powered in which case it can play a full audio.\nWhen clicked or triggered, it will toggle playing music and will play the song id you give it.\nSpeaker:LoadSound(SoundId) will return a Sound object\nA Sound object can be modified using properties SoundId, Looped, PlaybackSpeed, Pitch, TimePositionand the methods Play, Pause, Stop, Destroy",
+    "keys": {
+      "Audio": "@roblox/globaltype/Speaker.Audio",
+      "Chat": "@roblox/globaltype/Speaker.Chat",
+      "ClearSounds": "@roblox/globaltype/Speaker.ClearSounds",
+      "Configured": "@roblox/globaltype/Speaker.Configured",
+      "LoadSound": "@roblox/globaltype/Speaker.LoadSound",
+      "Pitch": "@roblox/globaltype/Speaker.Pitch",
+      "PlaySound": "@roblox/globaltype/Speaker.PlaySound",
+      "Triggered": "@roblox/globaltype/Speaker.Triggered",
+      "Volume": "@roblox/globaltype/Speaker.Volume"
+    }
+  },
+  "@roblox/globaltype/Speaker.Audio": {
+    "documentation": "The audio asset ID to be played."
+  },
+  "@roblox/globaltype/Speaker.Chat": {
+    "documentation": "Displays the <code>message</code> in a chat bubble just like if a player said it.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Speaker",
+        "name": "self"
+      },
+      {
+        "name": "message"
+      }
+    ]
+  },
+  "@roblox/globaltype/Speaker.ClearSounds": {
+    "documentation": "Stops and clears all sounds the speaker is currently playing.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Speaker",
+        "name": "self"
+      }
+    ]
+  },
+  "@roblox/globaltype/Speaker.Configured": {
+    "documentation": "Fires when the object is configured."
+  },
+  "@roblox/globaltype/Speaker.LoadSound": {
+    "documentation": "Returns a roblox [<code>Sound</code>](https://create.roblox.com/docs/reference/engine/classes/Sound) object with the given <code>soundId</code>.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Speaker",
+        "name": "self"
+      },
+      {
+        "name": "soundId"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/Speaker.LoadSound/returns/0"
+    ]
+  },
+  "@roblox/globaltype/Speaker.LoadSound/returns/0": {},
+  "@roblox/globaltype/Speaker.Pitch": {
+    "documentation": "The pitch at which to play the audio."
+  },
+  "@roblox/globaltype/Speaker.PlaySound": {
+    "documentation": "Plays a sound with the given <code>soundId</code>. If no <code>soundId</code> is provided it will default to the <code>Audio</code> configuration of the speaker.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Speaker",
+        "name": "self"
+      },
+      {
+        "name": "soundId"
+      }
+    ]
+  },
+  "@roblox/globaltype/Speaker.Triggered": {
+    "documentation": "Fires when the object is triggered."
+  },
+  "@roblox/globaltype/Speaker.Volume": {
+    "documentation": "The volume the audio plays at. The maximum volume is determined by the size of the speaker."
+  },
+  "@roblox/globaltype/Spotlight": {
+    "documentation": "Emits light in a cone when powered with electricity. Color emition can be changed by coloring it.",
+    "keys": {
+      "SetColor": "@roblox/globaltype/Spotlight.SetColor"
+    }
+  },
+  "@roblox/globaltype/Spotlight.SetColor": {
+    "documentation": "Sets the color of the light.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Spotlight",
+        "name": "self"
+      },
+      {
+        "name": "color"
+      }
+    ]
+  },
+  "@roblox/globaltype/Stanlium": {
+    "keys": {}
+  },
+  "@roblox/globaltype/StarMap": {
+    "documentation": "Shows your current location in the universe and other nearby stars and celestial bodies.\nHas 2 modes, universe and solar.\nUniverse mode shows your location in the universe, and solar mode shows your location in the solar system if you are in one.\nRequires power in order to function. \n\t\nIt also has unique icons for every celestial body type. Clicking on a Icon will set a all connected HyperDrive/Telescope to those coordinates.\n\nWhen triggered with polysilicon, polysilicon 0 will set it to univesre mode, polysilicon 1 will set it to solar system mode, and polysilicon 2 will switch it.\n\nHas two iterative functions that can be used with the microcontroller 'GetBodies' and 'GetSystems', e.g. for key, val in StartMap:GetBodies() do",
+    "keys": {
+      "GetBodies": "@roblox/globaltype/StarMap.GetBodies",
+      "GetSystems": "@roblox/globaltype/StarMap.GetSystems"
+    }
+  },
+  "@roblox/globaltype/StarMap.GetBodies": {
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/StarMap",
+        "name": "self"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/StarMap.GetBodies/returns/0"
+    ]
+  },
+  "@roblox/globaltype/StarMap.GetBodies/returns/0": {},
+  "@roblox/globaltype/StarMap.GetSystems": {
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/StarMap",
+        "name": "self"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/StarMap.GetSystems/returns/0"
+    ]
+  },
+  "@roblox/globaltype/StarMap.GetSystems/returns/0": {},
+  "@roblox/globaltype/StasisField": {
+    "documentation": "Creates a 500 stud radius field that prevents any parts or objects around it from being dragged.\nThis can be used alongside with a RegionCloaker to create public infrastructure to avoid trolling and such.\nHowever, in order to function, the shield must be anchored/grounded, and nothing must be blocking above it. The shield is also extremely fragile.",
+    "keys": {
+      "Loop": "@roblox/globaltype/StasisField.Loop"
+    }
+  },
+  "@roblox/globaltype/StasisField.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/Steam": {
+    "documentation": "A result of water being heated up to high temperatures.",
+    "keys": {}
+  },
+  "@roblox/globaltype/SteamEngine": {
+    "documentation": "It acts similar to a motor, but is powered by Steam instead of electricity. ",
+    "keys": {
+      "Configured": "@roblox/globaltype/SteamEngine.Configured",
+      "EngineSpeed": "@roblox/globaltype/SteamEngine.EngineSpeed"
+    }
+  },
+  "@roblox/globaltype/SteamEngine.Configured": {
+    "documentation": "Fires when the object is configured."
+  },
+  "@roblox/globaltype/SteamEngine.EngineSpeed": {
+    "documentation": "Determines the speed at which the engine is driven."
+  },
+  "@roblox/globaltype/SteamTurbine": {
+    "documentation": "Creates electricity when fueled by 2 boilers.",
+    "keys": {
+      "GetEfficiency": "@roblox/globaltype/SteamTurbine.GetEfficiency",
+      "GetProductionRate": "@roblox/globaltype/SteamTurbine.GetProductionRate",
+      "Loop": "@roblox/globaltype/SteamTurbine.Loop"
+    }
+  },
+  "@roblox/globaltype/SteamTurbine.GetEfficiency": {
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/SteamTurbine",
+        "name": "self"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/SteamTurbine.GetEfficiency/returns/0"
+    ]
+  },
+  "@roblox/globaltype/SteamTurbine.GetEfficiency/returns/0": {},
+  "@roblox/globaltype/SteamTurbine.GetProductionRate": {
+    "documentation": "The multiplier for the amount of steam consumption each tick, ranges between 1 and 10.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/SteamTurbine",
+        "name": "self"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/SteamTurbine.GetProductionRate/returns/0"
+    ]
+  },
+  "@roblox/globaltype/SteamTurbine.GetProductionRate/returns/0": {},
+  "@roblox/globaltype/SteamTurbine.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/Stick": {
+    "documentation": "A natural resource found in trees and flora, often accompanied by wood. It is used for creating vital tools.",
+    "keys": {}
+  },
+  "@roblox/globaltype/Stone": {
+    "documentation": "A resource found in nearly all planets. It is not recommended to use for structures, but is often used in crafting simple objects.",
+    "keys": {}
+  },
+  "@roblox/globaltype/StorageSensor": {
+    "documentation": "When the number of contents within connected storage objects is within a defined range, it will send trigger signals similar to a button.\nThis can be used to automate production of certain products when the stored quantity is low.",
+    "keys": {
+      "Loop": "@roblox/globaltype/StorageSensor.Loop",
+      "QuantityRange": "@roblox/globaltype/StorageSensor.QuantityRange"
+    }
+  },
+  "@roblox/globaltype/StorageSensor.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/StorageSensor.QuantityRange": {
+    "documentation": "The range of item quantities within which this sensor will trigger."
+  },
+  "@roblox/globaltype/StudAligner": {
+    "documentation": "An integral part for creating vehicles, it aligns them to be viable for saving.\nThis is important due to a bug in roblox called 'part shift' in which precision of numbers is lost during saving.\nAs a result, parts will move a tiny bit, which results in dramatic changes to a vehicle.\nThis part solves that, by alligned the vehicle to a whole number position, allowing it to be saved properly.\n\nMake sure the arrow is facing up.\nTo stud align your vehicle, make sure it is unanchored and simply trigger the stud alligner.\nOnce it aligns the vehicle, it will anchor all anchors attached.\n\nMake sure to also allign at a viable and proper place to prevent any noclip glitches during alignment.",
+    "keys": {
+      "OnClick": "@roblox/globaltype/StudAligner.OnClick",
+      "Triggered": "@roblox/globaltype/StudAligner.Triggered"
+    }
+  },
+  "@roblox/globaltype/StudAligner.OnClick": {
+    "documentation": "Fires when the object is clicked."
+  },
+  "@roblox/globaltype/StudAligner.Triggered": {
+    "documentation": "Fires when the object is triggered."
+  },
+  "@roblox/globaltype/Sulfur": {
+    "documentation": "A yellow flammable solid. Being set on fire gives it a special blue fire.",
+    "keys": {}
+  },
+  "@roblox/globaltype/Switch": {
+    "documentation": "Acts as a wire when active/green, but when black or inactive it acts as a normal object. Must use a polysilicon to switch for trigger events.",
+    "keys": {
+      "Configured": "@roblox/globaltype/Switch.Configured",
+      "OnClick": "@roblox/globaltype/Switch.OnClick",
+      "SwitchValue": "@roblox/globaltype/Switch.SwitchValue"
+    }
+  },
+  "@roblox/globaltype/Switch.Configured": {
+    "documentation": "Fires when the object is configured."
+  },
+  "@roblox/globaltype/Switch.OnClick": {
+    "documentation": "Fires when the object is clicked."
+  },
+  "@roblox/globaltype/Switch.SwitchValue": {
+    "documentation": "Determines whether the switch is active or not."
+  },
+  "@roblox/globaltype/Tank": {
+    "keys": {
+      "CanBeCraftedFrom": "@roblox/globaltype/Tank.CanBeCraftedFrom",
+      "OnClick": "@roblox/globaltype/Tank.OnClick",
+      "Resource": "@roblox/globaltype/Tank.Resource"
+    }
+  },
+  "@roblox/globaltype/Tank.CanBeCraftedFrom": {
+    "documentation": "Determines whether this tank can be used by nearby players to craft objects."
+  },
+  "@roblox/globaltype/Tank.OnClick": {
+    "documentation": "Fires when the object is clicked."
+  },
+  "@roblox/globaltype/Tank.Resource": {
+    "documentation": "The kind of resource the tank can hold. You can set this to Any to allow the tank to accept anything."
+  },
+  "@roblox/globaltype/Teleporter": {
+    "documentation": "A device used to transport players across regions.\nWhen powered and triggered, it will teleport all players in the beam to the given coordinates and teleporter id.\nIt will warp the player to a teleporter in the region with the given teleporter id.\n\nWhen warping to a teleporter inside of a planet, set the last value to true. For example,\n50, -50, 85, -75, true\n\nMake sure you set the correct coordinates OR YOU WILL BE STRANDED!\n\nCosts 1000 energy per teleport. Teleporter uses Energy regardless if a player is on the Teleporter at the moment it gets triggered.\n",
+    "keys": {
+      "Coordinates": "@roblox/globaltype/Teleporter.Coordinates",
+      "ForceLocalTeleport": "@roblox/globaltype/Teleporter.ForceLocalTeleport",
+      "TeleporterID": "@roblox/globaltype/Teleporter.TeleporterID",
+      "Triggered": "@roblox/globaltype/Teleporter.Triggered"
+    }
+  },
+  "@roblox/globaltype/Teleporter.Coordinates": {
+    "documentation": "The coordinates to your Destination."
+  },
+  "@roblox/globaltype/Teleporter.ForceLocalTeleport": {
+    "documentation": "Whether to only attempt to teleport to teleporters within the same region, ignoring the \"Coordinates\" configuration."
+  },
+  "@roblox/globaltype/Teleporter.TeleporterID": {
+    "documentation": "The ID of the teleporter at the goal coordinates to teleport directly to."
+  },
+  "@roblox/globaltype/Teleporter.Triggered": {
+    "documentation": "Fires when the object is triggered."
+  },
+  "@roblox/globaltype/Telescope": {
+    "documentation": "A device that allows you to look at celestial objects and regions of space from a far away distance.\nSimply click the device and an interface will pop up on your screen allowing you to see details about a planet.\nTo view a specific coordinate, configure the telescope and set to the desired coordinates.\n\nCan only see within 100 universe units, any farther will result in a blurry image.\n\nInformation such as resources on the planet, temperature, distance from its local sun, and planet type will be displayed as well.\n\nMust be powered in order to view object's information.\nHas a 1 minute delay between viewing different systems.",
+    "keys": {
+      "Configured": "@roblox/globaltype/Telescope.Configured",
+      "GetCoordinate": "@roblox/globaltype/Telescope.GetCoordinate",
+      "GetCurrentCoordinate": "@roblox/globaltype/Telescope.GetCurrentCoordinate",
+      "OnClick": "@roblox/globaltype/Telescope.OnClick",
+      "Triggered": "@roblox/globaltype/Telescope.Triggered",
+      "ViewCoordinates": "@roblox/globaltype/Telescope.ViewCoordinates",
+      "WhenRegionLoads": "@roblox/globaltype/Telescope.WhenRegionLoads"
+    }
+  },
+  "@roblox/globaltype/Telescope.Configured": {
+    "documentation": "Fires when the object is configured."
+  },
+  "@roblox/globaltype/Telescope.GetCoordinate": {
+    "documentation": "Gets information about the configured region.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Telescope",
+        "name": "self"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/Telescope.GetCoordinate/returns/0"
+    ]
+  },
+  "@roblox/globaltype/Telescope.GetCoordinate/returns/0": {},
+  "@roblox/globaltype/Telescope.GetCurrentCoordinate": {
+    "documentation": "Returns the current region coordinates.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Telescope",
+        "name": "self"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/Telescope.GetCurrentCoordinate/returns/0"
+    ]
+  },
+  "@roblox/globaltype/Telescope.GetCurrentCoordinate/returns/0": {},
+  "@roblox/globaltype/Telescope.OnClick": {
+    "documentation": "Fires when the object is clicked."
+  },
+  "@roblox/globaltype/Telescope.Triggered": {
+    "documentation": "Fires when the object is triggered."
+  },
+  "@roblox/globaltype/Telescope.ViewCoordinates": {
+    "documentation": "The coordinates to view."
+  },
+  "@roblox/globaltype/Telescope.WhenRegionLoads": {
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/Telescope",
+        "name": "self"
+      },
+      {
+        "name": "callback"
+      }
+    ]
+  },
+  "@roblox/globaltype/TemperatureGate": {
+    "keys": {
+      "Configured": "@roblox/globaltype/TemperatureGate.Configured",
+      "GetState": "@roblox/globaltype/TemperatureGate.GetState",
+      "GetTemp": "@roblox/globaltype/TemperatureGate.GetTemp",
+      "GetTemperature": "@roblox/globaltype/TemperatureGate.GetTemperature",
+      "Inverted": "@roblox/globaltype/TemperatureGate.Inverted",
+      "SwitchValue": "@roblox/globaltype/TemperatureGate.SwitchValue",
+      "TemperatureRange": "@roblox/globaltype/TemperatureGate.TemperatureRange"
+    }
+  },
+  "@roblox/globaltype/TemperatureGate.Configured": {
+    "documentation": "Fires when the object is configured."
+  },
+  "@roblox/globaltype/TemperatureGate.GetState": {
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/TemperatureGate",
+        "name": "self"
+      },
+      {
+        "name": "..."
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/TemperatureGate.GetState/returns/0"
+    ]
+  },
+  "@roblox/globaltype/TemperatureGate.GetState/returns/0": {},
+  "@roblox/globaltype/TemperatureGate.GetTemp": {
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/TemperatureGate",
+        "name": "self"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/TemperatureGate.GetTemp/returns/0"
+    ]
+  },
+  "@roblox/globaltype/TemperatureGate.GetTemp/returns/0": {},
+  "@roblox/globaltype/TemperatureGate.GetTemperature": {
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/TemperatureGate",
+        "name": "self"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/TemperatureGate.GetTemperature/returns/0"
+    ]
+  },
+  "@roblox/globaltype/TemperatureGate.GetTemperature/returns/0": {},
+  "@roblox/globaltype/TemperatureGate.Inverted": {
+    "documentation": "Whether or not the state will be inverted."
+  },
+  "@roblox/globaltype/TemperatureGate.SwitchValue": {
+    "documentation": "Determines whether the switch is active or not."
+  },
+  "@roblox/globaltype/TemperatureGate.TemperatureRange": {
+    "documentation": "The range of temperatures (°F) within which the gate will be open."
+  },
+  "@roblox/globaltype/TemperatureSensor": {
+    "documentation": "When the surrounding temperature is within a defined range, it will send trigger signals similar to a button.\n\nFor example, if the current temperature is 1100 and the temperature range is \"1000:inf\", then the sensor will send a signal.\n\t\nThis is very useful for creating smart cooling systems for a vehicle or reactor, preventing overheating from occuring.\n\nIf you want the temperature sensor to trigger outside of a certain range, take the inverse of the range.\nFor example, \"-inf:999\" would trigger when the temperature is within that range.\n\nConnecting the TemperatureSensor to a reactor will use the reactor's temperature instead of the surrounding temperature.",
+    "keys": {
+      "GetTemp": "@roblox/globaltype/TemperatureSensor.GetTemp",
+      "Loop": "@roblox/globaltype/TemperatureSensor.Loop",
+      "TemperatureRange": "@roblox/globaltype/TemperatureSensor.TemperatureRange"
+    }
+  },
+  "@roblox/globaltype/TemperatureSensor.GetTemp": {
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/TemperatureSensor",
+        "name": "self"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/TemperatureSensor.GetTemp/returns/0"
+    ]
+  },
+  "@roblox/globaltype/TemperatureSensor.GetTemp/returns/0": {},
+  "@roblox/globaltype/TemperatureSensor.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/TemperatureSensor.TemperatureRange": {
+    "documentation": "The range of temperatures (°F) which this sensor will trigger at."
+  },
+  "@roblox/globaltype/Tetrahedron": {
+    "documentation": "A tetrahedron template made of 3 perpendicular right triangles.",
+    "keys": {}
+  },
+  "@roblox/globaltype/Thruster": {
+    "documentation": "A device that creates forward propulsion depending on its size when powered.\nThe size of the thruster will determine the max thrust speed it can have, with a larger thruster being capable of higher speeds.\n\nThe speed setting of the thruster can also be configured from -100 (full backward) to 100 (full forward).\n\nThe maximum speed of a thruster is dependent on its volume.\nThrusters will generate more heat the larger and more powerful the thruster is. A 10x10x10 thruster, for example, would need about 8 coolers to operate.\nThe power required by a thruster is proportional to its actual speed output.\n\nThrusters can be heated to a temperature of around <200 degrees before overheating and combusting.",
+    "keys": {
+      "Configured": "@roblox/globaltype/Thruster.Configured",
+      "Propulsion": "@roblox/globaltype/Thruster.Propulsion"
+    }
+  },
+  "@roblox/globaltype/Thruster.Configured": {
+    "documentation": "Fires when the object is configured."
+  },
+  "@roblox/globaltype/Thruster.Propulsion": {
+    "documentation": "Determines the percentage of thrust (speed). Affects fuel consumption."
+  },
+  "@roblox/globaltype/Tile": {
+    "documentation": "A cheap material made from baked clay useful for building houses.",
+    "keys": {}
+  },
+  "@roblox/globaltype/TimeSensor": {
+    "documentation": "When the current time matches the same time as the timesensor, it will trigger.\n\nFor example, if the world turns 7:15 it will activate.\n\nThis is useful for creating dynamic lights that turn on only during the night, saving energy.\n\nThe format should be hour:minute",
+    "keys": {
+      "Time": "@roblox/globaltype/TimeSensor.Time"
+    }
+  },
+  "@roblox/globaltype/TimeSensor.Time": {
+    "documentation": "The time at which this sensor will trigger."
+  },
+  "@roblox/globaltype/TintedGlass": {
+    "documentation": "A material similar to Glass, but is tinted black on the front..",
+    "keys": {}
+  },
+  "@roblox/globaltype/Tire": {
+    "keys": {}
+  },
+  "@roblox/globaltype/Titanium": {
+    "documentation": "A strong heavy material that is very useful for small scale constructs.",
+    "keys": {}
+  },
+  "@roblox/globaltype/Tool": {
+    "keys": {}
+  },
+  "@roblox/globaltype/TouchScreen": {
+    "documentation": "A Screen, but with capabilities of handling player mouse input.\nThis is to be used with programming.",
+    "keys": {
+      "Configured": "@roblox/globaltype/TouchScreen.Configured",
+      "CursorMoved": "@roblox/globaltype/TouchScreen.CursorMoved",
+      "CursorPressed": "@roblox/globaltype/TouchScreen.CursorPressed",
+      "CursorReleased": "@roblox/globaltype/TouchScreen.CursorReleased",
+      "GetCursor": "@roblox/globaltype/TouchScreen.GetCursor",
+      "GetCursors": "@roblox/globaltype/TouchScreen.GetCursors",
+      "VideoID": "@roblox/globaltype/TouchScreen.VideoID"
+    }
+  },
+  "@roblox/globaltype/TouchScreen.Configured": {
+    "documentation": "Fires when the object is configured."
+  },
+  "@roblox/globaltype/TouchScreen.CursorMoved": {
+    "documentation": "Fired when a player moves their cursor on the screen."
+  },
+  "@roblox/globaltype/TouchScreen.CursorPressed": {
+    "documentation": "Fired when a player left clicks on the screen."
+  },
+  "@roblox/globaltype/TouchScreen.CursorReleased": {
+    "documentation": "Fired when a player releases the left click button on the screen."
+  },
+  "@roblox/globaltype/TouchScreen.GetCursor": {
+    "documentation": "Gets the specified player's cursor.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/TouchScreen",
+        "name": "self"
+      },
+      {
+        "documentation": "@roblox/globaltype/TouchScreen.GetCursor/params/1",
+        "name": "username"
+      }
+    ]
+  },
+  "@roblox/globaltype/TouchScreen.GetCursor/params/1": {
+    "documentation": "The username of the player's cursor you want to get."
+  },
+  "@roblox/globaltype/TouchScreen.GetCursors": {
+    "documentation": "Gets a dictionary of player usernames to their cursors if their cursors are on the screen.",
+    "params": [
+      {
+        "documentation": "@roblox/globaltype/TouchScreen",
+        "name": "self"
+      }
+    ],
+    "returns": [
+      "@roblox/globaltype/TouchScreen.GetCursors/returns/0"
+    ]
+  },
+  "@roblox/globaltype/TouchScreen.GetCursors/returns/0": {
+    "documentation": "A dictionary of player usernames to their cursors."
+  },
+  "@roblox/globaltype/TouchScreen.VideoID": {
+    "documentation": "The ID of the camera feed being to be viewed, or 0 for none."
+  },
+  "@roblox/globaltype/TouchSensor": {
+    "documentation": "Sends trigger signals upon contact with another player or another object.",
+    "keys": {
+      "Touched": "@roblox/globaltype/TouchSensor.Touched"
+    }
+  },
+  "@roblox/globaltype/TouchSensor.Touched": {
+    "documentation": "Fires when the touch sensor is touched by something. The object or the touch sensor itself must be unanchored.",
+    "learn_more_link": "https://create.roblox.com/docs/reference/engine/classes/BasePart#Touched"
+  },
+  "@roblox/globaltype/TractorBeam": {
+    "keys": {
+      "PowerPercent": "@roblox/globaltype/TractorBeam.PowerPercent"
+    }
+  },
+  "@roblox/globaltype/TractorBeam.PowerPercent": {
+    "documentation": "Determines the percentage of total available force (depending on size) used by the beam."
+  },
+  "@roblox/globaltype/Transformer": {
+    "documentation": "Sends continuous trigger signals every second when powered.",
+    "keys": {
+      "Loop": "@roblox/globaltype/Transformer.Loop",
+      "LoopTime": "@roblox/globaltype/Transformer.LoopTime",
+      "Triggered": "@roblox/globaltype/Transformer.Triggered"
+    }
+  },
+  "@roblox/globaltype/Transformer.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/Transformer.LoopTime": {
+    "documentation": "The time in seconds between triggers."
+  },
+  "@roblox/globaltype/Transformer.Triggered": {
+    "documentation": "Fires when the object is triggered."
+  },
+  "@roblox/globaltype/Transistor": {
+    "keys": {
+      "Configured": "@roblox/globaltype/Transistor.Configured",
+      "Inverted": "@roblox/globaltype/Transistor.Inverted",
+      "OnClick": "@roblox/globaltype/Transistor.OnClick"
+    }
+  },
+  "@roblox/globaltype/Transistor.Configured": {
+    "documentation": "Fires when the object is configured."
+  },
+  "@roblox/globaltype/Transistor.Inverted": {
+    "documentation": "Whether or not the state will be inverted."
+  },
+  "@roblox/globaltype/Transistor.OnClick": {
+    "documentation": "Fires when the object is clicked."
+  },
+  "@roblox/globaltype/Transporter": {
+    "documentation": "Acts as an antenna but for bins and objects containing materials such as liquids and solids. \nUseful for creating large factory bases with many extractors without using long chutes.\n\t",
+    "keys": {
+      "TransporterID": "@roblox/globaltype/Transporter.TransporterID"
+    }
+  },
+  "@roblox/globaltype/Transporter.TransporterID": {
+    "documentation": "The ID of this transporter, to transmit to others with the same ID."
+  },
+  "@roblox/globaltype/Treads": {
+    "documentation": "When touching in contact with a solid surface, it will move forward. Must be connected to an engine or motor similar to a drivebox to function.",
+    "keys": {
+      "Loop": "@roblox/globaltype/Treads.Loop"
+    }
+  },
+  "@roblox/globaltype/Treads.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/TriggerSwitch": {
+    "documentation": "Acts as a triggerwire when active/green, but when black or inactive it acts as a normal object.",
+    "keys": {}
+  },
+  "@roblox/globaltype/TriggerWire": {
+    "documentation": "Allows trigger objects to interact with each other when connected by triggerwires.",
+    "keys": {}
+  },
+  "@roblox/globaltype/Truss": {
+    "documentation": "Used as a ladder.",
+    "keys": {}
+  },
+  "@roblox/globaltype/Uranium": {
+    "documentation": "A radioactive material often found in deposits in planets, especially ones near stars.\nUseful for energy generation from reactors or radiation generators.",
+    "keys": {}
+  },
+  "@roblox/globaltype/UserInput": {
+    "keys": {
+      "Gamepad": "@roblox/globaltype/UserInput.Gamepad",
+      "GamepadEnabled": "@roblox/globaltype/UserInput.GamepadEnabled",
+      "Keyboard": "@roblox/globaltype/UserInput.Keyboard",
+      "KeyboardEnabled": "@roblox/globaltype/UserInput.KeyboardEnabled",
+      "LastInputType": "@roblox/globaltype/UserInput.LastInputType",
+      "Mouse": "@roblox/globaltype/UserInput.Mouse",
+      "TouchEnabled": "@roblox/globaltype/UserInput.TouchEnabled",
+      "VREnabled": "@roblox/globaltype/UserInput.VREnabled"
+    },
+    "learn_more_link": "https://discord.com/channels/616089055532417036/823313507167502336/1038620936896790538"
+  },
+  "@roblox/globaltype/UserInput.Gamepad": {
+    "documentation": "An dictionary of <code>Enum.UserInputType.GamepadX</code> keys to an array of <code>InputObjects</code> representing the current state of all available inputs for said gamepad as values.",
+    "learn_more_link": "https://discord.com/channels/616089055532417036/823313507167502336/1038621144397381692"
+  },
+  "@roblox/globaltype/UserInput.GamepadEnabled": {
+    "documentation": "This property describes whether the device being used by a user has an available gamepad. If gamepads are available."
+  },
+  "@roblox/globaltype/UserInput.Keyboard": {
+    "documentation": "An array of <code>InputObjects</code> associated with the keys currently being pressed.",
+    "learn_more_link": "https://create.roblox.com/docs/reference/engine/classes/UserInputService#GetKeysPressed"
+  },
+  "@roblox/globaltype/UserInput.KeyboardEnabled": {
+    "documentation": "This property describes whether the user's device has a keyboard available. This property is <code>true</code> when the user's device has an available keyboard, and <code>false</code> when it does not.",
+    "learn_more_link": "https://create.roblox.com/docs/reference/engine/classes/UserInputService#KeyboardEnabled"
+  },
+  "@roblox/globaltype/UserInput.LastInputType": {
+    "documentation": "The 'Enum.UserInputType` associated with the user's most recent input.",
+    "learn_more_link": "https://create.roblox.com/docs/reference/engine/classes/UserInputService#GetLastInputType"
+  },
+  "@roblox/globaltype/UserInput.Mouse": {
+    "documentation": "An array of <code>InputObjects</code> corresponding to the mouse buttons currently being currently held down.",
+    "learn_more_link": "https://create.roblox.com/docs/reference/engine/classes/UserInputService#GetMouseButtonsPressed"
+  },
+  "@roblox/globaltype/UserInput.TouchEnabled": {
+    "documentation": "This property describes whether the user's current device has a touch screen available.",
+    "learn_more_link": "https://create.roblox.com/docs/reference/engine/classes/UserInputService#TouchEnabled"
+  },
+  "@roblox/globaltype/UserInput.VREnabled": {
+    "documentation": "This property describes whether the user is using a virtual reality (VR) device.",
+    "learn_more_link": "https://create.roblox.com/docs/reference/engine/classes/UserInputService#VREnabled"
+  },
+  "@roblox/globaltype/Valve": {
+    "documentation": "Acts as a pipe when active/gray, but when black or inactive it acts as a normal object.",
+    "keys": {}
+  },
+  "@roblox/globaltype/VehicleSeat": {
+    "documentation": "Allows players to control vehicles by rotating when sat on.\nIt is incredibly important to have when creating vehicles.\n\nAttaching buttons to the vehicleseat will allow the player sitting on it to trigger the button by pressing a key.\nSimply attach the button to the vehicle seat, configure it to the keybind you would like, and it will allow you to trigger that button by pressing the key when sitting down in the seat.\n\t",
+    "keys": {
+      "Configured": "@roblox/globaltype/VehicleSeat.Configured",
+      "Enabled": "@roblox/globaltype/VehicleSeat.Enabled",
+      "Mode": "@roblox/globaltype/VehicleSeat.Mode",
+      "Speed": "@roblox/globaltype/VehicleSeat.Speed"
+    }
+  },
+  "@roblox/globaltype/VehicleSeat.Configured": {
+    "documentation": "Fires when the object is configured."
+  },
+  "@roblox/globaltype/VehicleSeat.Enabled": {
+    "documentation": "Determines whether this seat should control its rotation. Turning this off results in a regular seat."
+  },
+  "@roblox/globaltype/VehicleSeat.Mode": {
+    "documentation": "The control mode of the seat. Horizontal: Rotate horizontally with A/D. Full: Rotate horizontally and vertically with W/A/S/D. Mouse: point towards the player's mouse when holding click."
+  },
+  "@roblox/globaltype/VehicleSeat.Speed": {
+    "documentation": "The speed at which the seat will rotate."
+  },
+  "@roblox/globaltype/Warhead": {
+    "documentation": "Causes a powerful explosion when triggered. You can use a delay wire to make it explode after a few seconds and not immediately.\nThe only down-side of the warhead is that it is blocked completely by energy shields.",
+    "keys": {
+      "Triggered": "@roblox/globaltype/Warhead.Triggered"
+    }
+  },
+  "@roblox/globaltype/Warhead.Damaged": {},
+  "@roblox/globaltype/Warhead.Triggered": {
+    "documentation": "Fires when the object is triggered."
+  },
+  "@roblox/globaltype/Water": {
+    "documentation": "The basis of all life, and is a liquid found in terra, forest, ocean and certain tundras and rogue planets. Can be made from burning ice or snow.",
+    "keys": {}
+  },
+  "@roblox/globaltype/WaterCooler": {
+    "documentation": "Generates cold temperatures when given a supply of water. Useful for cooling down devices, and does not require power. Performs the same amount of cooling that five coolers would.",
+    "keys": {}
+  },
+  "@roblox/globaltype/Wedge": {
+    "documentation": "A triangular shaped template object.",
+    "keys": {}
+  },
+  "@roblox/globaltype/Winch": {
+    "documentation": "A special device used to control the length of constraints attached to it.\nWhen attaching a constraint to the Winch, click the Winch first.\nWhen triggered with polysilicon, it will increase (Activate) or decrease (Deactivate).\n",
+    "keys": {
+      "DeltaLength": "@roblox/globaltype/Winch.DeltaLength",
+      "MaxLength": "@roblox/globaltype/Winch.MaxLength",
+      "MinLength": "@roblox/globaltype/Winch.MinLength"
+    }
+  },
+  "@roblox/globaltype/Winch.DeltaLength": {
+    "documentation": "The length change in studs when triggered by Polysilicon."
+  },
+  "@roblox/globaltype/Winch.MaxLength": {
+    "documentation": "The maximum length in studs of the rope."
+  },
+  "@roblox/globaltype/Winch.MinLength": {
+    "documentation": "The minimum length in studs of the rope."
+  },
+  "@roblox/globaltype/Wing": {
+    "documentation": "Creates lift from being pushed forward.\nWorks at higher altitudes and at better angles than a CrudeWing.\nDoes not work in space or in non atmospheric planets.",
+    "keys": {
+      "Loop": "@roblox/globaltype/Wing.Loop"
+    }
+  },
+  "@roblox/globaltype/Wing.Loop": {
+    "documentation": "Fires when the object is updated by the game loop."
+  },
+  "@roblox/globaltype/Wire": {
+    "documentation": "Allows electrical objects to interact with each other when connected by wires. For example, attaching a wire between a powercell and a light will allow electricity to move through the wire, allowing the light to function causing a source of light to be created.",
+    "keys": {}
+  },
+  "@roblox/globaltype/WirelessButton": {
+    "documentation": "Similar to a button, but can be clicked from infinite distances and cannot be used for keybinds.",
+    "keys": {
+      "OnClick": "@roblox/globaltype/WirelessButton.OnClick"
+    }
+  },
+  "@roblox/globaltype/WirelessButton.OnClick": {
+    "documentation": "Fires when the object is clicked."
+  },
+  "@roblox/globaltype/Wood": {
+    "documentation": "**A natural resource found in trees and flora.** It is a simple and yet effective material that is used for simple objects and structures. These can be mainly found in terra and forest planets, but can occasionally be found in temperate tundra and desert planets.",
+    "keys": {}
+  },
+  "@roblox/globaltype/ZapWire": {
+    "documentation": "Allows electrical objects to interact with each other when connected by wires.\nIf a flammable object is touched, it will be lit on fire.",
+    "keys": {}
+  },
+  "@roblox/globaltype/_100k": {
+    "documentation": "100k visits special item",
+    "keys": {}
+  }
+}

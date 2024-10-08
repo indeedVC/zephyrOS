@@ -1,0 +1,21 @@
+{
+  "luau-lsp.completion.imports.suggestServices": false,
+  "luau-lsp.platform.type": "roblox",
+  "luau-lsp.require.fileAliases": {
+    "ar_input": "./types/modules/ar_input.luau",
+    "fs": "./types/modules/fs.luau",
+    "nature2d": "./types/modules/nature2d.luau",
+    "players": "./types/modules/players.luau",
+    "repr": "./types/modules/repr.luau",
+    "signal": "./types/modules/signal.luau",
+    "symbol": "./types/modules/symbol.luau",
+    "tween": "./types/modules/tween.luau"
+  },
+  "luau-lsp.sourcemap.enabled": false,
+  "luau-lsp.types.definitionFiles": [
+    "./types/global.d.luau"
+  ],
+  "luau-lsp.types.documentationFiles": [
+    "./types/documentation.d.json"
+  ]
+}

@@ -1,0 +1,1 @@
+Pilot.lua definitions and types were automatically generated using [ArvidSilverlock/Pilot.lua-Luau-LSP](https://github.com/ArvidSilverlock/Pilot.lua-Luau-LSP).
